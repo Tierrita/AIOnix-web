@@ -111,45 +111,75 @@ body {
   margin-top: 3px;
 }
 
-/* 🧭 SIDEBAR */
+/* ⚡ SIDEBAR CYBER OPTIMIZADA */
 .sidebar {
   position: fixed;
   left: 40px;
   top: 50%;
   transform: translateY(-50%);
   width: 220px;
-  background: var(--blur-bg);
-  backdrop-filter: blur(8px);
-  border: 1px solid var(--color-border);
+  background: rgba(0, 10, 20, 0.6); /* capa más profunda */
+  backdrop-filter: blur(12px) saturate(160%);
+  border: 1px solid rgba(0, 255, 255, 0.15);
   border-radius: 20px;
-  box-shadow: 0 0 25px var(--color-accent-dim);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
   padding: 1.5rem 0;
   z-index: 1000;
   transition: all 0.4s ease;
+  overflow: hidden;
 }
 
-.sidebar:hover {
-  transform: translateY(-50%) scale(1.05);
-  box-shadow: 0 0 25px var(--color-accent);
-}
-
+/* 🧭 Lista limpia y centrada */
 .sidebar ul {
   list-style: none;
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
 }
 
-.sidebar li {
-  padding: 0.8rem 0;
-  color: var(--color-text);
-  cursor: pointer;
-  font-family: var(--font-body);
-  transition: color 0.3s, text-shadow 0.3s;
+/* 🔗 Links neon */
+.sidebar a {
+  display: block;
+  width: 100%;
+  padding: 10px 24px;
+  color: #00ffff;
+  font-family: "Orbitron", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
 }
 
-.sidebar li.active,
-.sidebar li:hover {
-  color: var(--color-accent);
-  text-shadow: 0 0 10px var(--color-accent);
+/* 🌀 Hover con glow animado */
+.sidebar a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px #00ffff, 0 0 15px #00ffff;
+  transform: translateX(5px);
+}
+
+/* 💡 Activo con intensidad */
+.sidebar a.active {
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(90deg, rgba(0,255,255,0.15), rgba(0,255,255,0));
+  border-left: 3px solid #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    left: 10px;
+    width: 180px;
+    padding: 1rem 0;
+  }
+  .sidebar a {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
 
 /* 💫 HOME SECTION */
