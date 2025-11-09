@@ -1,0 +1,218 @@
+/* =======================================================
+   💠 AIONIX VISUAL SYSTEM — Futuristic Clean Interface
+   ======================================================= */
+
+/* VARIABLES DE ESTILO */
+:root {
+  --color-bg: #000000;
+  --color-text: #e0e0e0;
+  --color-accent: #00ffff;
+  --color-accent-dim: rgba(0, 255, 255, 0.5);
+  --color-border: rgba(0, 255, 255, 0.2);
+  --blur-bg: rgba(20, 20, 30, 0.3);
+  --font-title: "Orbitron", sans-serif;
+  --font-body: "Rajdhani", sans-serif;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* 🌌 FONDO BASE */
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+
+/* ⚡ CAPA DE ENERGÍA DIFUSA */
+#energy-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  pointer-events: none;
+  mix-blend-mode: lighten;
+  opacity: 0.28;
+  filter: blur(60px) saturate(150%);
+  animation: energyFlow 7s infinite alternate ease-in-out;
+}
+
+/* ✨ GLOW CENTRAL */
+#glow-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.08), transparent 70%);
+  filter: blur(60px);
+  z-index: -1;
+  animation: pulseGlow 6s infinite alternate ease-in-out;
+}
+
+/* ANIMACIONES DE BRILLO */
+@keyframes pulseGlow {
+  from { opacity: 0.25; }
+  to { opacity: 0.6; }
+}
+
+@keyframes energyFlow {
+  0% { opacity: 0.2; filter: blur(60px) saturate(130%); }
+  50% { opacity: 0.35; filter: blur(70px) saturate(220%); }
+  100% { opacity: 0.2; filter: blur(60px) saturate(130%); }
+}
+
+/* 🧠 HEADER */
+.aionix-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: var(--blur-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  text-align: center;
+}
+
+.header-title {
+  font-family: var(--font-title);
+  color: var(--color-accent);
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px var(--color-accent);
+}
+
+.header-subtitle {
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  margin-top: 3px;
+}
+
+/* 🧭 SIDEBAR */
+.sidebar {
+  position: fixed;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 220px;
+  background: var(--blur-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: 0 0 25px var(--color-accent-dim);
+  padding: 1.5rem 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.sidebar:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 0 25px var(--color-accent);
+}
+
+.sidebar ul {
+  list-style: none;
+  text-align: center;
+}
+
+.sidebar li {
+  padding: 0.8rem 0;
+  color: var(--color-text);
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.sidebar li.active,
+.sidebar li:hover {
+  color: var(--color-accent);
+  text-shadow: 0 0 10px var(--color-accent);
+}
+
+/* 💫 HOME SECTION */
+#home {
+  margin-left: 300px;
+  margin-top: 120px;
+  margin-bottom: 100px;
+  height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas-container {
+  text-align: center;
+  position: relative;
+}
+
+#ai-core {
+  width: 900px;
+  height: 400px;
+  border-radius: 40px;
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 0 40px var(--color-accent-dim);
+  background: radial-gradient(circle at center, rgba(0,255,255,0.2), rgba(0,0,0,0.85));
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 0 25px var(--color-accent-dim));
+}
+
+.aionix-title {
+  margin-top: 50px;
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  text-shadow: 0 0 15px var(--color-accent);
+}
+
+/* 🧾 FOOTER */
+.aionix-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background: var(--blur-bg);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--color-text);
+  z-index: 1500;
+}
+
+.footer-links a {
+  color: var(--color-accent);
+  text-decoration: none;
+  margin-left: 12px;
+  transition: text-shadow 0.3s;
+}
+
+.footer-links a:hover {
+  text-shadow: 0 0 8px var(--color-accent);
+}
