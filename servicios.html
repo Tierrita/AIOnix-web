@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIONIX ⚡</title>
-
-  <!-- 🔠 Fuentes Futuristas -->
+  <meta name="description" content="Servicios AIOnix - Desarrollo web, Backend, IA, Automatización, Consultoría y MVP. Soluciones tecnológicas personalizadas." />
+  <meta name="keywords" content="desarrollo web, backend, IA, automatización, consultoría, MVP, programación" />
+  
+  <!-- � Open Graph -->
+  <meta property="og:title" content="Servicios - AIOnix ⚡" />
+  <meta property="og:description" content="Desarrollo web, IA, automatización y consultoría tecnológica adaptada a tu negocio." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aionix.tech/servicios.html" />
+  
+  <title>Servicios - AIOnix ⚡</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- 🎨 Estilos Principales -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/servicios.css" />
 </head>
 <body>
-  <!-- 🌌 CAPAS DE FONDO PROFUNDO -->
+  <!-- 🌌 CAPAS DE FONDO -->
   <div id="background"></div>
   <canvas id="energy-layer"></canvas>
   <div id="glow-overlay"></div>
@@ -23,27 +31,113 @@
     <p class="header-subtitle">Inteligencia aplicada al rendimiento ⚡</p>
   </header>
   
-<!-- 🧭 NAVEGACIÓN VERTICAL -->
-<nav class="sidebar">
-  <ul>
-    <li><a href="index.html">🏠 Home</a></li>
-    <li><a href="about.html">💡 About</a></li>
-    <li><a href="servicios.html" class="active">⚙️ Servicios</a></li>
-    <li><a href="proyectos.html">🧩 Proyectos</a></li>
-    <li><a href="vision.html">🚀 Visión</a></li>
-    <li><a href="equipo.html">👥 Equipo</a></li>
-    <li><a href="contacto.html">📞 Contacto</a></li>
-  </ul>
-</nav>
+  <!-- 🧭 NAVEGACIÓN -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about.html">💡 About</a></li>
+      <li><a href="servicios.html" class="active">⚙️ Servicios</a></li>
+      <li><a href="proyectos.html">🧩 Proyectos</a></li>
+      <li><a href="vision.html">🚀 Visión</a></li>
+      <li><a href="equipo.html">👥 Equipo</a></li>
+      <li><a href="contacto.html">📞 Contacto</a></li>
+    </ul>
+  </nav>
 
-  <!-- 💫 SECCIÓN PRINCIPAL -->
-  <section id="home">
-    <div class="canvas-container">
-      <canvas id="ai-core"></canvas>
-      <h1 class="aionix-title">AIONIX SYSTEM ONLINE 🔄</h1>
-    </div>
+  <!-- 💫 CONTENIDO PRINCIPAL -->
+  <section id="services" class="services-container">
+    <main>
+      <h1>Nuestros Servicios</h1>
+      <p class="intro">Ofrecemos soluciones tecnológicas completas adaptadas a tus necesidades. Desde ideas hasta producto final.</p>
+      
+      <div class="services-grid">
+        <!-- Servicio 1: Desarrollo Web -->
+        <article class="service-card">
+          <div class="service-icon">💻</div>
+          <h3>Desarrollo Web</h3>
+          <p>Aplicaciones web modernas, responsivas y rápidas. Utilizamos React, Vue, Node.js y tecnologías actuales para crear experiencias digitales impactantes.</p>
+          <ul class="service-features">
+            <li>✓ Frontend interactivo</li>
+            <li>✓ Backend escalable</li>
+            <li>✓ Diseño responsive</li>
+            <li>✓ Optimización SEO</li>
+          </ul>
+        </article>
+
+        <!-- Servicio 2: Backend & APIs -->
+        <article class="service-card">
+          <div class="service-icon">⚙️</div>
+          <h3>Backend & APIs</h3>
+          <p>Construcción de servidores robustos, bases de datos optimizadas y APIs RESTful. Garantizamos escalabilidad y seguridad en tus aplicaciones.</p>
+          <ul class="service-features">
+            <li>✓ APIs REST y GraphQL</li>
+            <li>✓ Bases de datos (SQL/NoSQL)</li>
+            <li>✓ Autenticación segura</li>
+            <li>✓ Microservicios</li>
+          </ul>
+        </article>
+
+        <!-- Servicio 3: IA y Machine Learning -->
+        <article class="service-card">
+          <div class="service-icon">🤖</div>
+          <h3>IA y Machine Learning</h3>
+          <p>Integramos inteligencia artificial en tus aplicaciones. Desde chatbots hasta análisis predictivo, llevamos IA a tu negocio.</p>
+          <ul class="service-features">
+            <li>✓ Chatbots inteligentes</li>
+            <li>✓ Análisis de datos</li>
+            <li>✓ Predicciones automáticas</li>
+            <li>✓ Procesamiento de imágenes</li>
+          </ul>
+        </article>
+
+        <!-- Servicio 4: Automatización -->
+        <article class="service-card">
+          <div class="service-icon">🔄</div>
+          <h3>Automatización</h3>
+          <p>Automatizamos procesos repetitivos, integramos sistemas y creamos flujos de trabajo inteligentes que ahorran tiempo y dinero.</p>
+          <ul class="service-features">
+            <li>✓ Bots de tareas</li>
+            <li>✓ Integraciones API</li>
+            <li>✓ Flujos automatizados</li>
+            <li>✓ Scraping de datos</li>
+          </ul>
+        </article>
+
+        <!-- Servicio 5: Consultoría Tecnológica -->
+        <article class="service-card">
+          <div class="service-icon">💡</div>
+          <h3>Consultoría Tecnológica</h3>
+          <p>Asesoramiento estratégico en tecnología. Te ayudamos a elegir las mejores herramientas, arquitectura y roadmap para tu proyecto.</p>
+          <ul class="service-features">
+            <li>✓ Auditorías técnicas</li>
+            <li>✓ Selección de stack</li>
+            <li>✓ Arquitectura de sistemas</li>
+            <li>✓ Migración de tecnología</li>
+          </ul>
+        </article>
+
+        <!-- Servicio 6: MVP y Prototipado -->
+        <article class="service-card">
+          <div class="service-icon">�</div>
+          <h3>MVP y Prototipado</h3>
+          <p>Validar tu idea rápido y económico. Creamos MVPs funcionales en semanas para testear tu concepto y atraer inversión.</p>
+          <ul class="service-features">
+            <li>✓ Desarrollo ágil</li>
+            <li>✓ Iteración rápida</li>
+            <li>✓ Producto mínimo viable</li>
+            <li>✓ Feedback en tiempo real</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <h2>¿Listo para tu próximo proyecto?</h2>
+        <p>Contacta con nosotros para discutir cómo podemos ayudarte a alcanzar tus objetivos.</p>
+        <a href="contacto.html" class="btn-primary">💬 Solicitar Presupuesto</a>
+      </section>
+    </main>
   </section>
-  
 
   <!-- 🧾 PIE DE PÁGINA -->
   <footer class="aionix-footer">
@@ -51,17 +145,16 @@
       <p>© 2025 AIONIX | Inteligencia aplicada al rendimiento.</p>
     </div>
     <div class="footer-center">
-      <p>🌍 Buenos Aires, Argentina · contacto@aionix.tech</p>
+      <p>🌍 Buenos Aires, Argentina · aionix498@gmail.com</p>
     </div>
     <div class="footer-links">
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-      <a href="#">Instagram</a>
+      <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Tierrita" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:aionix498@gmail.com">Email</a>
     </div>
   </footer>
 
-  <!-- 📦 LIBRERÍAS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- 📦 SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
   <script src="js/main.js"></script>
 </body>

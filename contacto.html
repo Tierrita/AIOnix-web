@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIONIX ⚡</title>
-
-  <!-- 🔠 Fuentes Futuristas -->
+  <meta name="description" content="Contacta con AIOnix - Soluciones en programación e IA. Envíanos tu mensaje y te responderemos en breve." />
+  
+  <!-- � Open Graph -->
+  <meta property="og:title" content="Contacto - AIOnix ⚡" />
+  <meta property="og:description" content="¿Tienes un proyecto? Contacta con nosotros hoy." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aionix.tech/contacto.html" />
+  
+  <title>Contacto - AIOnix ⚡</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- 🎨 Estilos Principales -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contacto.css" />
 </head>
 <body>
-  <!-- 🌌 CAPAS DE FONDO PROFUNDO -->
+  <!-- 🌌 CAPAS DE FONDO -->
   <div id="background"></div>
   <canvas id="energy-layer"></canvas>
   <div id="glow-overlay"></div>
@@ -23,27 +30,93 @@
     <p class="header-subtitle">Inteligencia aplicada al rendimiento ⚡</p>
   </header>
   
-<!-- 🧭 NAVEGACIÓN VERTICAL -->
-<nav class="sidebar">
-  <ul>
-    <li><a href="index.html" >🏠 Home</a></li>
-    <li><a href="about.html">💡 About</a></li>
-    <li><a href="servicios.html">⚙️ Servicios</a></li>
-    <li><a href="proyectos.html">🧩 Proyectos</a></li>
-    <li><a href="vision.html">🚀 Visión</a></li>
-    <li><a href="equipo.html">👥 Equipo</a></li>
-    <li><a href="contacto.html" class="active">📞 Contacto</a></li>
-  </ul>
-</nav>
+  <!-- 🧭 NAVEGACIÓN -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about.html">💡 About</a></li>
+      <li><a href="servicios.html">⚙️ Servicios</a></li>
+      <li><a href="proyectos.html">🧩 Proyectos</a></li>
+      <li><a href="vision.html">🚀 Visión</a></li>
+      <li><a href="equipo.html">👥 Equipo</a></li>
+      <li><a href="contacto.html" class="active">📞 Contacto</a></li>
+    </ul>
+  </nav>
 
-  <!-- 💫 SECCIÓN PRINCIPAL -->
-  <section id="home">
-    <div class="canvas-container">
-      <canvas id="ai-core"></canvas>
-      <h1 class="aionix-title">AIONIX SYSTEM ONLINE 🔄</h1>
-    </div>
+  <!-- 💫 CONTENIDO PRINCIPAL -->
+  <section id="contact" class="contact-container">
+    <main>
+      <h1>Ponte en contacto con nosotros</h1>
+      <p class="intro">Nos encantaría escuchar sobre tu proyecto. Llena el formulario y te responderemos lo antes posible.</p>
+      
+      <div class="contact-content">
+        <!-- FORMULARIO -->
+        <div class="contact-form-wrapper">
+          <form id="contact-form" method="POST" action="https://formspree.io/f/xvgzrgzw">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre completo" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Teléfono (opcional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000" />
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Asunto</label>
+              <input type="text" id="subject" name="subject" placeholder="¿Sobre qué es tu proyecto?" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" rows="6" placeholder="Cuéntanos tu idea, proyecto o consulta..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">📤 Enviar Mensaje</button>
+          </form>
+
+          <div id="form-success" class="form-success" style="display: none;">
+            <p>✅ ¡Mensaje enviado! Nos pondremos en contacto pronto.</p>
+          </div>
+        </div>
+
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <div class="contact-info">
+          <h2>Otras formas de contactarnos</h2>
+
+          <div class="contact-method">
+            <h3>📧 Email</h3>
+            <p><a href="mailto:aionix498@gmail.com">aionix498@gmail.com</a></p>
+          </div>
+
+          <div class="contact-method">
+            <h3>🌍 Ubicación</h3>
+            <p>Buenos Aires, Argentina</p>
+          </div>
+
+          <div class="contact-method">
+            <h3>🔗 Redes Sociales</h3>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank" rel="noopener" class="social-icon">LinkedIn Franco</a>
+              <a href="https://www.linkedin.com/in/gabriel-silva-75341a219/" target="_blank" rel="noopener" class="social-icon">LinkedIn Gabriel</a>
+              <a href="https://github.com/Tierrita" target="_blank" rel="noopener" class="social-icon">GitHub</a>
+            </div>
+          </div>
+
+          <div class="contact-method info-box">
+            <h3>💡 ¿Tienes prisa?</h3>
+            <p>Escríbenos un email directamente para respuestas más rápidas. Normalmente respondemos en menos de 24 horas.</p>
+          </div>
+        </div>
+      </div>
+    </main>
   </section>
-  
 
   <!-- 🧾 PIE DE PÁGINA -->
   <footer class="aionix-footer">
@@ -51,18 +124,18 @@
       <p>© 2025 AIONIX | Inteligencia aplicada al rendimiento.</p>
     </div>
     <div class="footer-center">
-      <p>🌍 Buenos Aires, Argentina · contacto@aionix.tech</p>
+      <p>🌍 Buenos Aires, Argentina · aionix498@gmail.com</p>
     </div>
     <div class="footer-links">
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-      <a href="#">Instagram</a>
+      <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Tierrita" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:aionix498@gmail.com">Email</a>
     </div>
   </footer>
 
-  <!-- 📦 LIBRERÍAS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- 📦 SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/contacto.js"></script>
 </body>
 </html>

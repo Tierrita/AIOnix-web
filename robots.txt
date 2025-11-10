@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aionix.tech/sitemap.xml
+
+# Desallowed
+Disallow: /admin/
+Disallow: /.git/

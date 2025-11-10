@@ -3,10 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIONIX | About</title>
+  <meta name="description" content="Sobre AIOnix - Misión, visión y valores. Transformamos ideas en software inteligente." />
+  
+  <!-- 🔍 Open Graph -->
+  <meta property="og:title" content="Sobre Nosotros - AIOnix ⚡" />
+  <meta property="og:description" content="Descubre la historia, misión y visión de AIOnix." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aionix.tech/about.html" />
+  
+  <title>Sobre Nosotros - AIOnix ⚡</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
 </head>
 <body>
+  <!-- 🌌 CAPAS DE FONDO -->
+  <div id="background"></div>
+  <canvas id="energy-layer"></canvas>
+  <div id="glow-overlay"></div>
+
+  <!-- 🧠 CABECERA -->
+  <header class="aionix-header">
+    <h1 class="header-title">AIONIX</h1>
+    <p class="header-subtitle">Inteligencia aplicada al rendimiento ⚡</p>
+  </header>
+  
+  <!-- 🧭 NAVEGACIÓN -->
   <nav class="sidebar">
     <ul>
       <li><a href="index.html">🏠 Home</a></li>
@@ -19,15 +43,125 @@
     </ul>
   </nav>
 
-  <section class="content">
-    <h1>Sobre Nosotros</h1>
-    <p>AIONIX combina inteligencia artificial y tecnología aplicada para optimizar mantenimiento, diagnóstico y rendimiento industrial.</p>
+  <!-- 💫 CONTENIDO PRINCIPAL -->
+  <section id="about" class="about-container">
+    <main>
+      <h1>Sobre AIOnix</h1>
+      
+      <!-- HISTORIA -->
+      <section class="about-section">
+        <h2>🚀 Nuestra Historia</h2>
+        <p>AIOnix nace de la pasión de dos desarrolladores por resolver problemas complejos mediante tecnología. Franco y Gabriel decidieron crear una empresa que combinara innovación, calidad y compromiso con cada cliente.</p>
+        <p>Comenzamos en el mundo freelance con un objetivo claro: ofrecer soluciones tecnológicas que generen impacto real en los negocios. Cada proyecto es una oportunidad para aprender, crecer y crear valor.</p>
+      </section>
+
+      <!-- MISIÓN -->
+      <section class="about-section">
+        <h2>🎯 Nuestra Misión</h2>
+        <p>Transformar ideas en software inteligente. Ofrecemos soluciones de programación e IA que empoderan a empresas y emprendedores para escalar sus operaciones, automatizar procesos y tomar decisiones basadas en datos.</p>
+      </section>
+
+      <!-- VISIÓN -->
+      <section class="about-section">
+        <h2>🌟 Nuestra Visión</h2>
+        <p>Ser un referente en soluciones tecnológicas inteligentes en Latinoamérica. Queremos que AIOnix sea sinónimo de innovación, confiabilidad y excelencia en cada proyecto que emprendamos.</p>
+      </section>
+
+      <!-- VALORES -->
+      <section class="about-section">
+        <h2>💎 Nuestros Valores</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">🤝</div>
+            <h3>Compromiso</h3>
+            <p>Nos comprometemos 100% con el éxito de cada cliente. Tu éxito es nuestro éxito.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">⚡</div>
+            <h3>Innovación</h3>
+            <p>Siempre buscamos las mejores tecnologías y metodologías para resolver problemas de forma creativa.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🔒</div>
+            <h3>Confiabilidad</h3>
+            <p>Código limpio, seguro y mantenible. Confianza en cada línea de código que escribimos.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">📈</div>
+            <h3>Calidad</h3>
+            <p>No hacemos compromisos con la calidad. Cada proyecto es una obra maestra en progreso.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">💬</div>
+            <h3>Comunicación</h3>
+            <p>Creemos en la comunicación clara y transparente. Siempre estaremos disponibles para ti.</p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🎓</div>
+            <h3>Aprendizaje</h3>
+            <p>Nos apasiona aprender constantemente. La tecnología no para, y nosotros tampoco.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- POR QUÉ ELEGIRNOS -->
+      <section class="about-section why-us">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>✅ Experiencia Comprobada</h3>
+            <p>Proyectos entregados a tiempo, con calidad y cumpliendo especificaciones.</p>
+          </div>
+          <div class="why-item">
+            <h3>✅ Tecnología de Punta</h3>
+            <p>Utilizamos las mejores herramientas y frameworks del mercado actual.</p>
+          </div>
+          <div class="why-item">
+            <h3>✅ Equipo Apasionado</h3>
+            <p>Franco y Gabriel traen experiencia, creatividad y dedicación a cada proyecto.</p>
+          </div>
+          <div class="why-item">
+            <h3>✅ Precios Competitivos</h3>
+            <p>Ofrecemos excelente relación calidad-precio adaptada a tu presupuesto.</p>
+          </div>
+          <div class="why-item">
+            <h3>✅ Soporte Post-Lanzamiento</h3>
+            <p>Mantenimiento, mejoras y soporte continuo después del deployment.</p>
+          </div>
+          <div class="why-item">
+            <h3>✅ Flexibilidad</h3>
+            <p>Nos adaptamos a tu forma de trabajo: ágil, waterfall, o metodología personalizada.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <h2>Listo para transformar tu idea en realidad</h2>
+        <p>Contáctanos hoy y discutamos cómo podemos ayudarte a alcanzar tus objetivos.</p>
+        <a href="contacto.html" class="btn-primary">💬 Iniciar un Proyecto</a>
+      </section>
+    </main>
   </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
-<script src="js/background.js"></script>
+  <!-- 🧾 PIE DE PÁGINA -->
+  <footer class="aionix-footer">
+    <div class="footer-left">
+      <p>© 2025 AIONIX | Inteligencia aplicada al rendimiento.</p>
+    </div>
+    <div class="footer-center">
+      <p>🌍 Buenos Aires, Argentina · aionix498@gmail.com</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Tierrita" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:aionix498@gmail.com">Email</a>
+    </div>
+  </footer>
 
+  <!-- 📦 SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,86 @@
+# ===============================================
+# 🚀 AIOnix - Configuración Apache .htaccess
+# ===============================================
+
+# 1. REWRITE ENGINE (URL amigables)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Eliminar www
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+  
+  # Forzar HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  
+  # Remover .html de URLs
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([^\.]+)$ $1.html [NC,L]
+</IfModule>
+
+# 2. CACHÉ (Browser caching)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # HTML
+  ExpiresByType text/html "access 1 hour"
+  
+  # CSS y JS
+  ExpiresByType text/css "access 1 month"
+  ExpiresByType application/javascript "access 1 month"
+  
+  # Imágenes
+  ExpiresByType image/jpeg "access 1 month"
+  ExpiresByType image/gif "access 1 month"
+  ExpiresByType image/png "access 1 month"
+  ExpiresByType image/webp "access 1 month"
+  ExpiresByType image/svg+xml "access 1 month"
+  ExpiresByType image/x-icon "access 1 month"
+  
+  # Fonts
+  ExpiresByType font/truetype "access 1 year"
+  ExpiresByType font/opentype "access 1 year"
+  ExpiresByType font/woff "access 1 year"
+  ExpiresByType font/woff2 "access 1 year"
+  
+  ExpiresDefault "access 7 days"
+</IfModule>
+
+# 3. COMPRESIÓN GZIP
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# 4. HEADERS DE SEGURIDAD
+<IfModule mod_headers.c>
+  # X-Content-Type-Options
+  Header always set X-Content-Type-Options "nosniff"
+  
+  # X-Frame-Options
+  Header always set X-Frame-Options "SAMEORIGIN"
+  
+  # X-XSS-Protection
+  Header always set X-XSS-Protection "1; mode=block"
+  
+  # Referrer-Policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # Permissions-Policy
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# 5. DESHABILITAR ACCESO A ARCHIVOS SENSIBLES
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+<FilesMatch "\.(env|json|md|txt)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# 6. 404 PERSONALIZADO (opcional)
+ErrorDocument 404 /index.html

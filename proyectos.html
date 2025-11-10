@@ -3,16 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIONIX ⚡</title>
-
-  <!-- 🔠 Fuentes Futuristas -->
+  <meta name="description" content="Proyectos - AIOnix. Portfolio de casos de éxito y soluciones desarrolladas." />
+  
+  <!-- � Open Graph -->
+  <meta property="og:title" content="Proyectos - AIOnix ⚡" />
+  <meta property="og:description" content="Conoce nuestros casos de éxito y proyectos destacados." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aionix.tech/proyectos.html" />
+  
+  <title>Proyectos - AIOnix ⚡</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- 🎨 Estilos Principales -->
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/proyectos.css" />
 </head>
 <body>
-  <!-- 🌌 CAPAS DE FONDO PROFUNDO -->
+  <!-- 🌌 CAPAS DE FONDO -->
   <div id="background"></div>
   <canvas id="energy-layer"></canvas>
   <div id="glow-overlay"></div>
@@ -23,27 +30,61 @@
     <p class="header-subtitle">Inteligencia aplicada al rendimiento ⚡</p>
   </header>
   
-<!-- 🧭 NAVEGACIÓN VERTICAL -->
-<nav class="sidebar">
-  <ul>
-    <li><a href="index.html">🏠 Home</a></li>
-    <li><a href="about.html">💡 About</a></li>
-    <li><a href="servicios.html">⚙️ Servicios</a></li>
-    <li><a href="proyectos.html"  class="active">🧩 Proyectos</a></li>
-    <li><a href="vision.html">🚀 Visión</a></li>
-    <li><a href="equipo.html">👥 Equipo</a></li>
-    <li><a href="contacto.html">📞 Contacto</a></li>
-  </ul>
-</nav>
+  <!-- 🧭 NAVEGACIÓN -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about.html">💡 About</a></li>
+      <li><a href="servicios.html">⚙️ Servicios</a></li>
+      <li><a href="proyectos.html" class="active">🧩 Proyectos</a></li>
+      <li><a href="vision.html">🚀 Visión</a></li>
+      <li><a href="equipo.html">👥 Equipo</a></li>
+      <li><a href="contacto.html">📞 Contacto</a></li>
+    </ul>
+  </nav>
 
-  <!-- 💫 SECCIÓN PRINCIPAL -->
-  <section id="home">
-    <div class="canvas-container">
-      <canvas id="ai-core"></canvas>
-      <h1 class="aionix-title">AIONIX SYSTEM ONLINE 🔄</h1>
-    </div>
+  <!-- 💫 CONTENIDO PRINCIPAL -->
+  <section id="projects" class="projects-container">
+    <main>
+      <h1>Nuestros Proyectos</h1>
+      <p class="intro">Estos son algunos de los proyectos en los que hemos trabajado. Desde MVPs hasta aplicaciones en producción.</p>
+      
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <h3>En desarrollo</h3>
+            <p class="coming-soon">Próximamente compartiremos nuestros casos de éxito</p>
+          </div>
+          <p>Estamos trabajando en varios proyectos emocionantes. Pronto compartiremos detalles sobre soluciones que hemos desarrollado, tecnologías utilizadas y resultados alcanzados.</p>
+          <div class="project-tags">
+            <span class="tag">Web</span>
+            <span class="tag">IA</span>
+            <span class="tag">Automatización</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <h3>Tu proyecto aquí</h3>
+            <p class="coming-soon">Sé parte de nuestro portfolio</p>
+          </div>
+          <p>¿Tienes un proyecto interesante? Nos encantaría trabajar contigo y convertir tu idea en realidad. Luego podremos compartir tu caso de éxito aquí.</p>
+          <div class="project-tags">
+            <span class="tag">MVP</span>
+            <span class="tag">Startups</span>
+            <span class="tag">Innovación</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <h2>¿Listo para tu próximo proyecto?</h2>
+        <p>Contáctanos y conversemos sobre cómo podemos ayudarte.</p>
+        <a href="contacto.html" class="btn-primary">💬 Solicitar Presupuesto</a>
+      </section>
+    </main>
   </section>
-  
 
   <!-- 🧾 PIE DE PÁGINA -->
   <footer class="aionix-footer">
@@ -51,17 +92,16 @@
       <p>© 2025 AIONIX | Inteligencia aplicada al rendimiento.</p>
     </div>
     <div class="footer-center">
-      <p>🌍 Buenos Aires, Argentina · contacto@aionix.tech</p>
+      <p>🌍 Buenos Aires, Argentina · aionix498@gmail.com</p>
     </div>
     <div class="footer-links">
-      <a href="#">LinkedIn</a>
-      <a href="#">GitHub</a>
-      <a href="#">Instagram</a>
+      <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Tierrita" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:aionix498@gmail.com">Email</a>
     </div>
   </footer>
 
-  <!-- 📦 LIBRERÍAS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <!-- 📦 SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
   <script src="js/main.js"></script>
 </body>

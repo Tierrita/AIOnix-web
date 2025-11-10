@@ -3,32 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIONIX | About</title>
+  <meta name="description" content="Equipo AIOnix - Franco y Gabriel, fundadores. Expertos en programación e IA." />
+  
+  <!-- 🔍 Open Graph -->
+  <meta property="og:title" content="Equipo - AIOnix ⚡" />
+  <meta property="og:description" content="Conoce a Franco y Gabriel, los fundadores de AIOnix." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aionix.tech/equipo.html" />
+  
+  <title>Equipo - AIOnix ⚡</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/equipo.css" />
 </head>
 <body>
-<!-- 🧭 NAVEGACIÓN VERTICAL -->
-<nav class="sidebar">
-  <ul>
-    <li><a href="index.html" >🏠 Home</a></li>
-    <li><a href="about.html">💡 About</a></li>
-    <li><a href="servicios.html">⚙️ Servicios</a></li>
-    <li><a href="proyectos.html">🧩 Proyectos</a></li>
-    <li><a href="vision.html">🚀 Visión</a></li>
-    <li><a href="equipo.html" class="active">👥 Equipo</a></li>
-    <li><a href="contacto.html">📞 Contacto</a></li>
-  </ul>
-</nav>
+  <!-- 🌌 CAPAS DE FONDO -->
+  <div id="background"></div>
+  <canvas id="energy-layer"></canvas>
+  <div id="glow-overlay"></div>
 
-  <section class="content">
-    <h1>Sobre Nosotros</h1>
-    <p>AIONIX combina inteligencia artificial y tecnología aplicada para optimizar mantenimiento, diagnóstico y rendimiento industrial.</p>
+  <!-- � CABECERA -->
+  <header class="aionix-header">
+    <h1 class="header-title">AIONIX</h1>
+    <p class="header-subtitle">Inteligencia aplicada al rendimiento ⚡</p>
+  </header>
+  
+  <!-- �🧭 NAVEGACIÓN -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="about.html">💡 About</a></li>
+      <li><a href="servicios.html">⚙️ Servicios</a></li>
+      <li><a href="proyectos.html">🧩 Proyectos</a></li>
+      <li><a href="vision.html">🚀 Visión</a></li>
+      <li><a href="equipo.html" class="active">👥 Equipo</a></li>
+      <li><a href="contacto.html">📞 Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- 💫 CONTENIDO PRINCIPAL -->
+  <section id="team" class="team-container">
+    <main>
+      <h1>Nuestro Equipo</h1>
+      <p class="intro">Somos dos desarrolladores apasionados por la tecnología y la innovación. Trabajamos juntos para crear soluciones que impacten.</p>
+      
+      <div class="team-grid">
+        <!-- Franco -->
+        <article class="team-member">
+          <div class="member-image">
+            <img src="Assent/img/Cuenca_perfil.jpg" alt="Franco - Fundador de AIOnix" loading="lazy" />
+          </div>
+          <div class="member-content">
+            <h3>Franco</h3>
+            <p class="member-role">Desarrollador Full Stack</p>
+            <p class="member-bio">Especializado en backend, arquitectura de sistemas y automatización. Apasionado por crear soluciones escalables.</p>
+            <div class="member-skills">
+              <span class="skill">Python</span>
+              <span class="skill">Node.js</span>
+              <span class="skill">Bases de Datos</span>
+              <span class="skill">APIs</span>
+            </div>
+            <div class="member-social">
+              <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+              <a href="https://github.com/Tierrita" target="_blank" rel="noopener" class="social-link">GitHub</a>
+            </div>
+        <article class="team-member">
+          <div class="member-image">
+            <img src="Assent/img/Silva_perfil.jpg" alt="Gabriel - Fundador de AIOnix" loading="lazy" />
+          </div>
+          <div class="member-content">
+            <h3>Gabriel</h3>
+            <p class="member-role">Desarrollador Full Stack</p>
+            <p class="member-bio">Especializado en frontend, UX/UI y experiencia del usuario. Experto en crear interfaces intuitivas e impactantes.</p>
+            <div class="member-skills">
+              <span class="skill">React</span>
+              <span class="skill">Vue.js</span>
+              <span class="skill">UX/UI</span>
+              <span class="skill">IA/ML</span>
+            </div>
+            <div class="member-social">
+              <a href="https://www.linkedin.com/in/gabriel-silva-75341a219/" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+              <a href="https://github.com/Tierrita" target="_blank" rel="noopener" class="social-link">GitHub</a>
+            </div>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <h2>¿Quieres trabajar con nosotros?</h2>
+        <p>Estamos siempre buscando proyectos emocionantes. Contacta con nosotros hoy.</p>
+        <a href="contacto.html" class="btn-primary">💬 Iniciar un Proyecto</a>
+      </section>
+    </main>
   </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.net.min.js"></script>
-<script src="js/background.js"></script>
+  <!-- 🧾 PIE DE PÁGINA -->
+  <footer class="aionix-footer">
+    <div class="footer-left">
+      <p>© 2025 AIONIX | Inteligencia aplicada al rendimiento.</p>
+    </div>
+    <div class="footer-center">
+      <p>🌍 Buenos Aires, Argentina · aionix498@gmail.com</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Tierrita" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:aionix498@gmail.com">Email</a>
+    </div>
+  </footer>
 
+  <!-- 📦 SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
 
