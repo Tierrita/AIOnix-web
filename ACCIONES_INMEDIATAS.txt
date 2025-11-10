@@ -1,0 +1,285 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║         ✅ AIONIX WEB LISTA PARA DESPLIEGUE - GUÍA DE ACCIÓN RÁPIDA          ║
+║                            10 de Noviembre 2025                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+🎯 3 ACCIONES INMEDIATAS PARA ACTIVAR TU SITIO (5 MINUTOS)
+═══════════════════════════════════════════════════════════════════════════════
+
+PASO 1️⃣: HABILITAR GITHUB PAGES
+╔──────────────────────────────────────────────────────────────────────────╗
+│ 🌐 Abre: https://github.com/Tierrita/AIOnix-web                         │
+│                                                                          │
+│ 📍 Navegación:                                                          │
+│    1. Click en "Settings" (esquina superior derecha)                    │
+│    2. En menú izquierdo, busca "Pages"                                  │
+│    3. Click en "Pages"                                                  │
+│                                                                          │
+│ ⚙️ Configuración:                                                        │
+│    • Source: "Deploy from a branch"                                     │
+│    • Branch: "equipo"                                                   │
+│    • Folder: "/ (root)"                                                 │
+│    • Click: "Save"                                                      │
+│                                                                          │
+│ ⏳ Espera: 1-3 minutos a que se compile                                  │
+│                                                                          │
+│ ✨ Resultado: Tu sitio estará en:                                       │
+│    https://tierrita.github.io/AIOnix-web                                │
+└──────────────────────────────────────────────────────────────────────────┘
+
+PASO 2️⃣: VERIFICAR QUE TODO FUNCIONA (2 MINUTOS)
+╔──────────────────────────────────────────────────────────────────────────╗
+│ Abre en navegador:                                                      │
+│    https://tierrita.github.io/AIOnix-web                                │
+│                                                                          │
+│ Verifica estos puntos:                                                  │
+│ ☐ Página home carga correctamente                                       │
+│ ☐ Ves el hero section con "Transformamos ideas..."                      │
+│ ☐ La animación VANTA.NET funciona (fondo con partículas)                │
+│ ☐ Links del footer muestran:                                            │
+│    - Franco: https://www.linkedin.com/in/franco-cuenca-5ab69a348       │
+│    - Email: aionix498@gmail.com                                         │
+│ ☐ Otros links de navegación abren sus páginas                           │
+│                                                                          │
+│ En móvil (F12 > Device Toggle):                                         │
+│ ☐ Responsive layout se ve bien                                          │
+│ ☐ No hay texto cortado                                                  │
+│ ☐ Botones son clickeables                                               │
+│                                                                          │
+│ Console (F12):                                                          │
+│ ☐ No hay errores rojos                                                  │
+│ ☐ Mensajes de Analytics pueden estar presentes (normal)                 │
+└──────────────────────────────────────────────────────────────────────────┘
+
+PASO 3️⃣: CONFIGURAR FORMSPREE PARA RECIBIR MENSAJES (3 MINUTOS) 🔴 CRITICO
+╔──────────────────────────────────────────────────────────────────────────╗
+│ ⚠️ SIN ESTO, EL FORMULARIO NO ENVIARÁ EMAILS                            │
+│                                                                          │
+│ 1. Ve a: https://formspree.io                                           │
+│ 2. Haz click en "Sign Up" (esquina superior derecha)                    │
+│ 3. Registrate usando: aionix498@gmail.com                               │
+│ 4. Verifica tu email (Formspree te enviará un email de confirmación)    │
+│ 5. Inicia sesión en Formspree                                           │
+│ 6. Haz click en "Create" o "New Form"                                   │
+│ 7. Dale un nombre: "AIOnix Contact Form"                                │
+│ 8. Copia el endpoint que ves (formato: f/abc123xyz...)                  │
+│                                                                          │
+│ 9. EDITA: contacto.html                                                 │
+│    Busca línea ~52:                                                     │
+│    action="https://formspree.io/f/xvgzrgzw"                             │
+│                                                                          │
+│    Reemplaza con tu endpoint:                                           │
+│    action="https://formspree.io/f/TU_ENDPOINT_AQUI"                     │
+│                                                                          │
+│ 10. Guarda contacto.html                                                │
+│                                                                          │
+│ 11. Sube cambios a GitHub:                                              │
+│     git add contacto.html                                               │
+│     git commit -m "🔧 Actualizar endpoint Formspree"                    │
+│     git push origin equipo                                              │
+│                                                                          │
+│ 12. Espera 1 minuto a que GitHub Pages se actualice                    │
+│                                                                          │
+│ 13. Prueba: Abre https://tierrita.github.io/AIOnix-web/contacto.html   │
+│     Envía un mensaje de prueba                                          │
+│     Verifica que llegue a aionix498@gmail.com                           │
+│                                                                          │
+│ ✨ Ahora cualquiera puede contactarte desde la web                       │
+└──────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎁 OPCIONALES (PARA DESPUÉS - 10 MINUTOS)
+═══════════════════════════════════════════════════════════════════════════════
+
+📌 OPCIONAL A: Crear Favicon (Logo en pestaña)
+┌──────────────────────────────────────────────────────────────────────────┐
+│ Beneficio: Logo aparecerá en la pestaña del navegador                   │
+│ Tiempo: 5 minutos                                                       │
+│                                                                          │
+│ 1. Ve a: https://favicon-generator.org                                  │
+│ 2. Sube logo o imagen de AIOnix (pequeña, cuadrada)                     │
+│ 3. Descarga favicon.ico                                                 │
+│ 4. Sube el archivo a la raíz del proyecto                               │
+│ 5. Git commit:                                                          │
+│    git add favicon.ico                                                  │
+│    git commit -m "📌 Agregar favicon AIOnix"                            │
+│    git push origin equipo                                               │
+│ 6. Limpia caché: Ctrl+Shift+Delete                                      │
+│ 7. Recarga página en navegador                                          │
+└──────────────────────────────────────────────────────────────────────────┘
+
+📊 OPCIONAL B: Configurar Google Analytics
+┌──────────────────────────────────────────────────────────────────────────┐
+│ Beneficio: Rastrear visitantes, de dónde vienen, qué ven               │
+│ Tiempo: 5 minutos                                                       │
+│                                                                          │
+│ 1. Ve a: https://analytics.google.com                                   │
+│ 2. Inicia sesión con tu Google Account                                  │
+│ 3. Click en "Create property"                                           │
+│ 4. Nombre: "AIOnix Web"                                                 │
+│ 5. Industria: "Información y Tecnología"                                │
+│ 6. Usa Google Analytics 4 (GA4) - opción por defecto                    │
+│ 7. URL: tierrita.github.io/AIOnix-web                                   │
+│ 8. Copia tu "Measurement ID" (ejemplo: G-XXXXXXXXXX)                    │
+│                                                                          │
+│ 9. Edita: js/main.js (alrededor de línea 28)                            │
+│    Descomentar y reemplazar:                                            │
+│    window.dataLayer = window.dataLayer || [];                           │
+│    function gtag(){dataLayer.push(arguments);}                          │
+│    gtag('js', new Date());                                              │
+│    gtag('config', 'G-TU_ID_AQUI');                                      │
+│                                                                          │
+│ 10. Git commit:                                                         │
+│     git add js/main.js                                                  │
+│     git commit -m "📈 Configurar Google Analytics"                      │
+│     git push origin equipo                                              │
+│                                                                          │
+│ 11. En Analytics, después de 5-10 minutos, verás "Real Time" activo    │
+│     Abre tu sitio y verás las visitas en tiempo real                    │
+└──────────────────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+❓ ¿ALGO NO FUNCIONA?
+═══════════════════════════════════════════════════════════════════════════════
+
+Problema: "GitHub Pages dice 'Your site is ready', pero veo 404"
+└─ Solución: Espera 3-5 minutos más. GitHub necesita tiempo para compilar.
+             Si sigue mostrando 404, verifica que seleccionaste rama "equipo"
+
+Problema: "No veo cambios después de git push"
+└─ Solución: Abre tu navegador en modo incógnito (Ctrl+Shift+N)
+             Limpia caché: Ctrl+Shift+Delete
+             Recarga la página: F5
+
+Problema: "Formulario contacto no envía"
+└─ Solución: ¿Configuraste Formspree? (Paso 3️⃣ arriba)
+             ¿Escribiste el endpoint correcto en contacto.html?
+             ¿Verificaste email en Formspree dashboard?
+             Prueba directamente: https://formspree.io/your-endpoint
+
+Problema: "Las imágenes de Franco y Gabriel no se ven"
+└─ Solución: Las imágenes están en Assent/img/
+             Si falta carpeta, necesitas descargarla del proyecto original
+             O puedes reemplazarlas con URLs externas
+
+Problema: "Quiero cambiar colores/diseño"
+└─ Solución: Edita css/style.css variables CSS (líneas 15-25)
+             Busca: --color-accent: #00ffff (cambiar a tu color)
+             Guarda y git push origin equipo
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📊 ESTADO ACTUAL DEL PROYECTO
+═══════════════════════════════════════════════════════════════════════════════
+
+✅ COMPLETADO:
+  ├─ 7 páginas HTML con contenido completo
+  ├─ 7 hojas CSS profesionales
+  ├─ 2 scripts JavaScript optimizados
+  ├─ SEO configurado (meta tags, Open Graph, sitemap)
+  ├─ Responsive design (móvil + desktop)
+  ├─ Documentación técnica completa
+  ├─ Git repository con commits
+  └─ Listo para GitHub Pages
+
+⏳ EN PROGRESO:
+  ├─ Habilitar GitHub Pages (HACER AHORA - Paso 1️⃣)
+  └─ Configurar Formspree (HACER AHORA - Paso 3️⃣)
+
+🔜 PRÓXIMOS (DESPUÉS DEL LANZAMIENTO):
+  ├─ Crear favicon (opcional pero recomendado)
+  ├─ Google Analytics (para trackear visitantes)
+  ├─ Agregar primeros proyectos al portfolio
+  ├─ Blog técnico o artículos
+  └─ Actualizar constantemente contenido
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🌐 URLS IMPORTANTES
+═══════════════════════════════════════════════════════════════════════════════
+
+Tu Sitio Web:
+  https://tierrita.github.io/AIOnix-web
+
+Repositorio GitHub:
+  https://github.com/Tierrita/AIOnix-web
+
+Panel GitHub Pages Settings:
+  https://github.com/Tierrita/AIOnix-web/settings/pages
+
+Formspree Dashboard:
+  https://formspree.io/login
+
+Google Analytics:
+  https://analytics.google.com
+
+LinkedIn Franco:
+  https://www.linkedin.com/in/franco-cuenca-5ab69a348
+
+LinkedIn Gabriel:
+  https://www.linkedin.com/in/gabriel-silva-75341a219/
+
+═══════════════════════════════════════════════════════════════════════════════
+
+📁 ESTRUCTURA DE ARCHIVOS CREADOS
+═══════════════════════════════════════════════════════════════════════════════
+
+Proyecto AIOnix/
+├── 📄 Páginas (7 HTML)
+│   ├── index.html ...................... Home
+│   ├── servicios.html .................. Servicios
+│   ├── contacto.html ................... Contacto
+│   ├── equipo.html ..................... Equipo
+│   ├── about.html ...................... About
+│   ├── vision.html ..................... Visión
+│   └── proyectos.html .................. Proyectos
+│
+├── 🎨 Estilos (7 CSS)
+│   └── css/
+│       ├── style.css ................... Base
+│       ├── servicios.css ............... Servicios
+│       ├── contacto.css ................ Contacto
+│       ├── equipo.css .................. Equipo
+│       ├── about.css ................... About
+│       ├── vision.css .................. Visión
+│       └── proyectos.css ............... Proyectos
+│
+├── ⚙️ Scripts (2 JS)
+│   └── js/
+│       ├── main.js ..................... VANTA + Analytics
+│       └── contacto.js ................. Validación formulario
+│
+├── 🔧 Configuración
+│   ├── robots.txt ...................... SEO (crawlers)
+│   ├── sitemap.xml ..................... Mapa del sitio
+│   └── .htaccess ....................... Caché y seguridad
+│
+└── 📚 Documentación
+    ├── README.md ....................... Guía técnica completa
+    ├── DESPLIEGUE_FINAL.md ............ Esta guía completa
+    ├── ESTADO_DESPLIEGUE.txt .......... Estado del proyecto
+    ├── INSTRUCCIONES_RAPIDAS.md ....... Acciones inmediatas
+    ├── ESTADISTICAS.md ................ Análisis del proyecto
+    └── RESUMEN_FINAL.txt .............. Resumen ejecutivo
+
+═══════════════════════════════════════════════════════════════════════════════
+
+🎉 ¡TODO LISTO!
+═══════════════════════════════════════════════════════════════════════════════
+
+Tu sitio web AIOnix está 100% completado y listo para producción.
+
+SIGUIENTE ACCIÓN: Sigue los 3 PASOS INMEDIATOS arriba para activar tu sitio.
+
+En 5 minutos tendrás tu página web en vivo en:
+🌐 https://tierrita.github.io/AIOnix-web
+
+Luego configura Formspree para recibir contactos de clientes potenciales.
+
+¡Éxito con AIOnix! 🚀⚡
+
+═══════════════════════════════════════════════════════════════════════════════
+Generado: 10 de noviembre de 2025
+Versión: 1.0 GOLD (Producción)
