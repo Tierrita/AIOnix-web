@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test EmailJS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #fff;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #00ffff;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      background: #2a2a2a;
+      border: 1px solid #00ffff;
+      color: #fff;
+      border-radius: 5px;
+    }
+    button {
+      background: #00ffff;
+      color: #000;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #00dddd;
+    }
+    #status {
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .success {
+      background: #00ff00;
+      color: #000;
+    }
+    .error {
+      background: #ff0000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧪 Test EmailJS - AIOnix</h1>
+  
+  <form id="test-form">
+    <div class="form-group">
+      <label>Nombre:</label>
+      <input type="text" id="name" required>
+    </div>
+    
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="email" id="email" required>
+    </div>
+    
+    <div class="form-group">
+      <label>Asunto:</label>
+      <input type="text" id="subject" required>
+    </div>
+    
+    <div class="form-group">
+      <label>Mensaje:</label>
+      <textarea id="message" rows="4" required></textarea>
+    </div>
+    
+    <button type="submit">📤 Enviar Test</button>
+  </form>
+  
+  <div id="status"></div>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    // Inicializar EmailJS
+    (function() {
+      emailjs.init('AHdO7dF2oJENBtqoX');
+      console.log('✅ EmailJS inicializado');
+    })();
+
+    const form = document.getElementById('test-form');
+    const status = document.getElementById('status');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      status.textContent = '⏳ Enviando...';
+      status.className = '';
+      
+      const params = {
+        from_name: document.getElementById('name').value,
+        reply_to: document.getElementById('email').value,
+        phone: 'Test',
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+      
+      console.log('📤 Enviando con parámetros:', params);
+      
+      emailjs.send('service_xxht5qp', 'template_hsujyci', params)
+        .then(function(response) {
+          console.log('✅ SUCCESS!', response);
+          status.textContent = '✅ ¡Email enviado exitosamente! Revisa aionix498@gmail.com';
+          status.className = 'success';
+          form.reset();
+        }, function(error) {
+          console.error('❌ ERROR:', error);
+          status.textContent = '❌ Error: ' + JSON.stringify(error);
+          status.className = 'error';
+        });
+    });
+  </script>
+</body>
+</html>

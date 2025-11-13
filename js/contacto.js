@@ -1,7 +1,10 @@
 // 📮 CONTACTO FORM HANDLING CON EMAILJS
 
-// Inicializar EmailJS con tu Public Key
-emailjs.init('AHdO7dF2oJENBtqoX');
+// Esperar a que EmailJS esté cargado
+(function() {
+  // Inicializar EmailJS con tu Public Key
+  emailjs.init('AHdO7dF2oJENBtqoX');
+})();
 
 const contactForm = document.getElementById('contact-form');
 const formSuccess = document.getElementById('form-success');
@@ -46,7 +49,7 @@ if (contactForm) {
     };
     
     // Enviar email usando EmailJS
-    emailjs.send('service_xxht5qp', 'fedbbag', templateParams)
+    emailjs.send('service_xxht5qp', 'template_hsujyci', templateParams)
       .then(function(response) {
         console.log('✅ Email enviado exitosamente!', response.status, response.text);
         
