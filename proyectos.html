@@ -2,10 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
   <meta name="description" content="Proyectos - AIOnix. Portfolio de casos de éxito y soluciones desarrolladas." />
   
-  <!-- � Open Graph -->
+  <!-- 🎨 Tema móvil -->
+  <meta name="theme-color" content="#00ffff" />
+  
+  <!-- 🔗 URL Canónica -->
+  <link rel="canonical" href="https://aionix.tech/proyectos.html" />
+  
+  <!-- 🔍 Open Graph -->
   <meta property="og:title" content="Proyectos - AIOnix ⚡" />
   <meta property="og:description" content="Conoce nuestros casos de éxito y proyectos destacados." />
   <meta property="og:type" content="website" />
@@ -26,20 +32,20 @@
 
   <!-- 🧠 CABECERA -->
   <header class="aionix-header">
-    <h1 class="header-title">AIONIX</h1>
+    <h1 class="header-title"><a href="index.html" class="logo-link">AIONIX</a></h1>
     <p class="header-subtitle">Inteligencia aplicada al rendimiento ⚡</p>
   </header>
   
-  <!-- 🧭 NAVEGACIÓN -->
-  <nav class="sidebar">
-    <ul>
-      <li><a href="index.html">🏠 Home</a></li>
-      <li><a href="about.html">💡 About</a></li>
-      <li><a href="servicios.html">⚙️ Servicios</a></li>
-      <li><a href="proyectos.html" class="active">🧩 Proyectos</a></li>
-      <li><a href="vision.html">🚀 Visión</a></li>
-      <li><a href="equipo.html">👥 Equipo</a></li>
-      <li><a href="contacto.html">📞 Contacto</a></li>
+  <!-- 🧭 NAVEGACIÓN VERTICAL (COLAPSABLE) -->
+  <nav class="sidebar sidebar-collapsed" aria-label="Navegación principal">
+    <ul role="list">
+      <li><a href="index.html" aria-label="Ir a la página de inicio"><span class="icon">🏠</span><span class="label">Home</span></a></li>
+      <li><a href="about.html" aria-label="Conocer más sobre AIOnix"><span class="icon">💡</span><span class="label">About</span></a></li>
+      <li><a href="servicios.html" aria-label="Ver nuestros servicios"><span class="icon">⚙️</span><span class="label">Servicios</span></a></li>
+      <li><a href="proyectos.html" class="active" aria-label="Explorar proyectos realizados" aria-current="page"><span class="icon">🧩</span><span class="label">Proyectos</span></a></li>
+      <li><a href="vision.html" aria-label="Descubrir nuestra visión"><span class="icon">🚀</span><span class="label">Visión</span></a></li>
+      <li><a href="equipo.html" aria-label="Conocer al equipo"><span class="icon">👥</span><span class="label">Equipo</span></a></li>
+      <li><a href="contacto.html" aria-label="Contactar con nosotros"><span class="icon">📞</span><span class="label">Contacto</span></a></li>
     </ul>
   </nav>
 

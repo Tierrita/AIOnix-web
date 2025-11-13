@@ -2,10 +2,16 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
   <meta name="description" content="AIOnix - Soluciones inteligentes en programación e IA. Desarrollo web, automatización y consultoría tecnológica para freelancers y empresas." />
   <meta name="keywords" content="programación, IA, desarrollo web, automatización, freelance, Buenos Aires" />
   <meta name="author" content="AIOnix - Franco y Gabriel" />
+  
+  <!-- 🎨 Tema móvil -->
+  <meta name="theme-color" content="#00ffff" />
+  
+  <!-- 🔗 URL Canónica -->
+  <link rel="canonical" href="https://aionix.tech/" />
   
   <!-- 🔍 Open Graph para redes sociales -->
   <meta property="og:title" content="AIOnix ⚡ - Soluciones en Programación e IA" />
@@ -38,40 +44,107 @@
 
   <!-- 🧠 CABECERA -->
   <header class="aionix-header">
-    <h1 class="header-title">AIONIX</h1>
+    <h1 class="header-title"><a href="index.html" class="logo-link">AIONIX</a></h1>
     <p class="header-subtitle">Inteligencia aplicada al rendimiento ⚡</p>
   </header>
   
-<!-- 🧭 NAVEGACIÓN VERTICAL -->
-<nav class="sidebar">
-  <ul>
-    <li><a href="index.html" class="active">🏠 Home</a></li>
-    <li><a href="about.html">💡 About</a></li>
-    <li><a href="servicios.html">⚙️ Servicios</a></li>
-    <li><a href="proyectos.html">🧩 Proyectos</a></li>
-    <li><a href="vision.html">🚀 Visión</a></li>
-    <li><a href="equipo.html">👥 Equipo</a></li>
-    <li><a href="contacto.html">📞 Contacto</a></li>
+<!-- 🧭 NAVEGACIÓN VERTICAL (COLAPSABLE) -->
+<nav class="sidebar sidebar-collapsed" aria-label="Navegación principal">
+  <ul role="list">
+    <li><a href="index.html" class="active" aria-label="Ir a la página de inicio" aria-current="page"><span class="icon">🏠</span><span class="label">Home</span></a></li>
+    <li><a href="about.html" aria-label="Conocer más sobre AIOnix"><span class="icon">💡</span><span class="label">About</span></a></li>
+    <li><a href="servicios.html" aria-label="Ver nuestros servicios"><span class="icon">⚙️</span><span class="label">Servicios</span></a></li>
+    <li><a href="proyectos.html" aria-label="Explorar proyectos realizados"><span class="icon">🧩</span><span class="label">Proyectos</span></a></li>
+    <li><a href="vision.html" aria-label="Descubrir nuestra visión"><span class="icon">🚀</span><span class="label">Visión</span></a></li>
+    <li><a href="equipo.html" aria-label="Conocer al equipo"><span class="icon">👥</span><span class="label">Equipo</span></a></li>
+    <li><a href="contacto.html" aria-label="Contactar con nosotros"><span class="icon">📞</span><span class="label">Contacto</span></a></li>
   </ul>
 </nav>
 
-  <!-- 💫 SECCIÓN PRINCIPAL (HERO) -->
-  <section id="home">
-    <main class="hero-content">
-      <div class="hero-text">
-        <h1 class="hero-title">Transformamos ideas en software inteligente</h1>
-        <p class="hero-subtitle">Desarrollo web, IA y automatización para impulsartu negocio freelance 🚀</p>
-        <p class="hero-description">En AIOnix creamos soluciones a medida con tecnología de punta. Desde aplicaciones web hasta sistemas inteligentes impulsados por IA, te ayudamos a escalar tu negocio.</p>
+  <!-- 💫 SECCIÓN PRINCIPAL (HERO) - Split-screen -->
+  <section id="home" aria-labelledby="hero-title">
+    <main class="hero-content hero-upgrade">
+      <div class="hero-left">
+        <div class="kicker">Agencia · Desarrollo · IA</div>
+        <h1 class="hero-title" id="hero-title">Construimos software inteligente que acelera tu negocio</h1>
+        <p class="hero-subtitle">Aplicaciones web, APIs escalables e integraciones con IA. Soluciones end-to-end pensadas para resultados.</p>
+
+        <ul class="hero-features">
+          <li>✅ Entregas rápidas y confiables</li>
+          <li>✅ Arquitectura escalable</li>
+          <li>✅ Diseño orientado a conversión</li>
+        </ul>
+
         <div class="hero-cta">
-          <a href="contacto.html" class="btn-primary">💬 Solicitar Presupuesto</a>
-          <a href="servicios.html" class="btn-secondary">⚙️ Ver Servicios</a>
+          <!-- CTA prioritario -->
+          <a href="contacto.html" class="btn-primary btn-hire" aria-label="Contactar para contratar servicios de AIOnix">⚡ Contratar Ahora</a>
+          <a href="proyectos.html" class="btn-secondary" aria-label="Explorar proyectos completados de AIOnix">🧩 Ver Proyectos</a>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="trust-badges">
+          <div class="trust-item">✓ Respuesta en menos de 24hs</div>
+          <div class="trust-item">✓ Sin costos ocultos</div>
         </div>
       </div>
-      <div class="canvas-container">
-        <canvas id="ai-core"></canvas>
-        <h2 class="aionix-title">AIONIX SYSTEM ONLINE 🔄</h2>
+
+      <div class="hero-right">
+        <!-- Logo destacado y mockup -->
+        <div class="hero-logo" aria-label="Logo de AIOnix">
+          <!-- Si tenés un archivo de logo, reemplaza este texto por una img tag -->
+          <div class="logo-mark">AIONIX</div>
+          <div class="logo-sub">Inteligencia aplicada al rendimiento</div>
+        </div>
+
+        <div class="mockup-device">
+          <div class="mockup-screen">
+            <div class="mock-card mock-card-1">📊 5+ años de experiencia</div>
+            <div class="mock-card mock-card-2">⭐ 99% satisfacción clientes</div>
+            <div class="mock-card mock-card-3">🚀 50+ proyectos completados</div>
+          </div>
+        </div>
+        <div class="mock-annotation">Diseño · Rendimiento · Escalabilidad</div>
       </div>
     </main>
+  </section>
+
+  <!-- 🛠️ SECCIÓN TECNOLOGÍAS -->
+  <section class="tech-stack" aria-labelledby="tech-title">
+    <div class="tech-container">
+      <h3 class="tech-title" id="tech-title">Tecnologías que dominamos</h3>
+      
+      <!-- Frontend -->
+      <div class="tech-category">
+        <h4 class="tech-category-title">
+          <span class="category-icon">🎨</span>
+          <span class="category-text">Front<span class="highlight">end</span></span>
+        </h4>
+        <div class="tech-grid">
+          <div class="tech-badge tech-html"><span class="tech-icon">&#60;/&#62;</span> HTML</div>
+          <div class="tech-badge tech-css"><span class="tech-icon">{ }</span> CSS</div>
+          <div class="tech-badge tech-js"><span class="tech-icon">JS</span> JavaScript</div>
+          <div class="tech-badge tech-ts"><span class="tech-icon">TS</span> TypeScript</div>
+          <div class="tech-badge tech-react"><span class="tech-icon">⚛</span> React</div>
+          <div class="tech-badge tech-vue"><span class="tech-icon">V</span> Vue.js</div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="tech-category">
+        <h4 class="tech-category-title">
+          <span class="category-icon">⚙️</span>
+          <span class="category-text">Back<span class="highlight">end</span> & DevOps</span>
+        </h4>
+        <div class="tech-grid">
+          <div class="tech-badge tech-node"><span class="tech-icon">⬢</span> Node.js</div>
+          <div class="tech-badge tech-python"><span class="tech-icon">🐍</span> Python</div>
+          <div class="tech-badge tech-postgres"><span class="tech-icon">🐘</span> PostgreSQL</div>
+          <div class="tech-badge tech-mongo"><span class="tech-icon">🍃</span> MongoDB</div>
+          <div class="tech-badge tech-aws"><span class="tech-icon">☁</span> AWS</div>
+          <div class="tech-badge tech-docker"><span class="tech-icon">🐋</span> Docker</div>
+        </div>
+      </div>
+    </div>
   </section>
   
 
