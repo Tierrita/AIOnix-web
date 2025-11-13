@@ -171,3 +171,40 @@ document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
   });
 });
 
+// 🍔 MENÚ HAMBURGUESA
+const hamburger = document.querySelector('.hamburger-menu');
+const sidebar = document.querySelector('.sidebar');
+
+if (hamburger && sidebar) {
+  hamburger.addEventListener('click', () => {
+    const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+    
+    // Toggle estado
+    hamburger.setAttribute('aria-expanded', !isExpanded);
+    sidebar.classList.toggle('mobile-visible');
+    
+    // Prevenir scroll cuando el menú está abierto
+    document.body.style.overflow = isExpanded ? '' : 'hidden';
+  });
+  
+  // Cerrar menú al hacer clic en un link
+  sidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.setAttribute('aria-expanded', 'false');
+      sidebar.classList.remove('mobile-visible');
+      document.body.style.overflow = '';
+    });
+  });
+  
+  // Cerrar menú al hacer clic fuera
+  document.addEventListener('click', (e) => {
+    if (!sidebar.contains(e.target) && !hamburger.contains(e.target)) {
+      if (sidebar.classList.contains('mobile-visible')) {
+        hamburger.setAttribute('aria-expanded', 'false');
+        sidebar.classList.remove('mobile-visible');
+        document.body.style.overflow = '';
+      }
+    }
+  });
+}
+
