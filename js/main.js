@@ -51,8 +51,14 @@ window.addEventListener("load", () => {
 const energyCanvas = document.getElementById("energy-layer");
 if (energyCanvas && !prefersReducedMotion) {
   const eCtx = energyCanvas.getContext("2d");
-  energyCanvas.width = innerWidth;
-  energyCanvas.height = innerHeight;
+  
+  // Función para ajustar el tamaño del canvas sin overflow
+  function resizeEnergyCanvas() {
+    energyCanvas.width = Math.min(window.innerWidth, document.documentElement.clientWidth);
+    energyCanvas.height = window.innerHeight;
+  }
+  
+  resizeEnergyCanvas();
 
   let t = 0;
 
@@ -81,10 +87,7 @@ if (energyCanvas && !prefersReducedMotion) {
   }
   drawEnergy();
 
-  window.addEventListener("resize", () => {
-    energyCanvas.width = innerWidth;
-    energyCanvas.height = innerHeight;
-  });
+  window.addEventListener("resize", resizeEnergyCanvas);
 }
 
 // 🔵 NÚCLEO AIONIX (Con verificación de reducedMotion)

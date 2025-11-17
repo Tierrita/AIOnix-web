@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Gmail - AIOnix</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h1 {
+      color: #00ffff;
+      text-align: center;
+    }
+    .test-form {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #00ffff;
+    }
+    button {
+      background: linear-gradient(135deg, #00ffff, #00bbbb);
+      color: #000;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(0,255,255,0.3);
+    }
+    button:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .success-message {
+      background: #4CAF50;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 20px;
+      display: none;
+    }
+    .error-message {
+      background: #f44336;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      margin-top: 20px;
+      display: none;
+    }
+    .info {
+      background: #e3f2fd;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      border-left: 4px solid #00ffff;
+    }
+    .info h3 {
+      margin-top: 0;
+      color: #00ffff;
+    }
+    .debug-info {
+      background: #f5f5f5;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-family: monospace;
+      font-size: 12px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧪 Test de Formulario Gmail - AIOnix</h1>
+  
+  <div class="info">
+    <h3>📋 Instrucciones:</h3>
+    <p>1. Completa el formulario con tu información</p>
+    <p>2. Haz clic en "Enviar Prueba"</p>
+    <p>3. Revisa tu Gmail para confirmar que llegó el email a: <strong>aionix498@gmail.com</strong></p>
+    <p>4. El remitente debería ser el email que pongas abajo</p>
+  </div>
+
+  <div class="test-form">
+    <form 
+      id="test-form" 
+      name="test-contacto-aionix"
+      method="POST"
+      action="https://aionix.tech/test-gmail.html"
+      accept-charset="UTF-8"
+    >
+      <div class="form-group">
+        <label for="test-name">Tu Nombre *</label>
+        <input 
+          type="text" 
+          id="test-name" 
+          name="name" 
+          placeholder="Ej: Juan Pérez" 
+          required 
+          autocomplete="name"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="test-email">Tu Email *</label>
+        <input 
+          type="email" 
+          id="test-email" 
+          name="email" 
+          placeholder="tu@email.com" 
+          required 
+          autocomplete="email"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="test-phone">Teléfono (opcional)</label>
+        <input 
+          type="tel" 
+          id="test-phone" 
+          name="phone" 
+          placeholder="+54 11 1234-5678" 
+          autocomplete="tel"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="test-subject">Asunto *</label>
+        <input 
+          type="text" 
+          id="test-subject" 
+          name="subject" 
+          placeholder="Ej: Prueba de formulario" 
+          required 
+          value="[TEST] Prueba de Formulario Gmail"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="test-message">Mensaje *</label>
+        <textarea 
+          id="test-message" 
+          name="message" 
+          rows="5" 
+          placeholder="Escribe tu mensaje de prueba..." 
+          required
+        >Este es un mensaje de prueba enviado desde test-gmail.html para verificar que el formulario de contacto funciona correctamente con EmailJS y llega a aionix498@gmail.com</textarea>
+      </div>
+
+      <button type="submit" id="submit-btn">📤 Enviar Prueba</button>
+    </form>
+
+    <div id="success-msg" class="success-message">
+      <h3>✅ ¡Email enviado exitosamente!</h3>
+      <p>Revisa la bandeja de entrada de <strong>aionix498@gmail.com</strong></p>
+      <p>También revisa SPAM por si acaso.</p>
+    </div>
+
+    <div id="error-msg" class="error-message">
+      <h3>❌ Error al enviar</h3>
+      <p id="error-text"></p>
+    </div>
+
+    <div id="debug-info" class="debug-info"></div>
+  </div>
+
+  <!-- EmailJS Library -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script>
+    // Inicializar EmailJS
+    (function() {
+      emailjs.init('AHdO7dF2oJENBtqoX'); // Tu Public Key
+      console.log('✅ EmailJS inicializado correctamente');
+    })();
+
+    const form = document.getElementById('test-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('success-msg');
+    const errorMsg = document.getElementById('error-msg');
+    const errorText = document.getElementById('error-text');
+    const debugInfo = document.getElementById('debug-info');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Mostrar debug info
+      debugInfo.style.display = 'block';
+      debugInfo.innerHTML = '<strong>🔄 Procesando...</strong>';
+      
+      // Obtener valores
+      const name = document.getElementById('test-name').value.trim();
+      const email = document.getElementById('test-email').value.trim();
+      const phone = document.getElementById('test-phone').value.trim();
+      const subject = document.getElementById('test-subject').value.trim();
+      const message = document.getElementById('test-message').value.trim();
+      
+      // Validaciones
+      if (!name || !email || !subject || !message) {
+        showError('Por favor completa todos los campos requeridos (*)');
+        return;
+      }
+      
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showError('Por favor ingresa un email válido');
+        return;
+      }
+      
+      // Deshabilitar botón
+      submitBtn.disabled = true;
+      submitBtn.textContent = '📤 Enviando...';
+      
+      // Ocultar mensajes previos
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      
+      // Preparar parámetros
+      const templateParams = {
+        from_name: name,
+        reply_to: email,
+        phone: phone || 'No proporcionado',
+        subject: subject,
+        message: message,
+        to_email: 'aionix498@gmail.com'
+      };
+      
+      debugInfo.innerHTML = `
+        <strong>📋 Parámetros enviados:</strong><br>
+        Service ID: service_xxht5qp<br>
+        Template ID: template_hsujyci<br>
+        From: ${name} (${email})<br>
+        Subject: ${subject}<br>
+        Phone: ${phone || 'No proporcionado'}<br>
+        Message: ${message.substring(0, 50)}...<br>
+        <br><strong>⏳ Enviando a EmailJS...</strong>
+      `;
+      
+      // Enviar con EmailJS
+      emailjs.send('service_xxht5qp', 'template_hsujyci', templateParams)
+        .then(function(response) {
+          console.log('✅ SUCCESS!', response.status, response.text);
+          
+          debugInfo.innerHTML += `<br><br><strong>✅ Respuesta del servidor:</strong><br>Status: ${response.status}<br>Text: ${response.text}`;
+          
+          // Mostrar éxito
+          successMsg.style.display = 'block';
+          form.style.display = 'none';
+          
+          // Scroll al mensaje
+          successMsg.scrollIntoView({ behavior: 'smooth' });
+          
+        }, function(error) {
+          console.error('❌ FAILED...', error);
+          
+          debugInfo.innerHTML += `<br><br><strong>❌ Error:</strong><br>${JSON.stringify(error, null, 2)}`;
+          
+          showError(`Error técnico: ${error.text || error.message || 'Desconocido'}`);
+          
+          // Rehabilitar botón
+          submitBtn.disabled = false;
+          submitBtn.textContent = '📤 Enviar Prueba';
+        });
+    });
+
+    function showError(message) {
+      errorText.textContent = message;
+      errorMsg.style.display = 'block';
+      errorMsg.scrollIntoView({ behavior: 'smooth' });
+      
+      submitBtn.disabled = false;
+      submitBtn.textContent = '📤 Enviar Prueba';
+    }
+  </script>
+</body>
+</html>

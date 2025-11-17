@@ -40,12 +40,13 @@ if (contactForm) {
     }
     
     // Preparar parámetros para EmailJS
+    // IMPORTANTE: Los nombres deben coincidir EXACTAMENTE con tu template de EmailJS
     const templateParams = {
-      from_name: name,
-      reply_to: email,
+      name: name,           // Si tu template usa {{name}}
+      email: email,         // Si tu template usa {{email}}
       phone: phone || 'No proporcionado',
-      subject: subject,
-      message: message
+      subject: subject,     // Si tu template usa {{subject}}
+      message: message      // Si tu template usa {{message}}
     };
     
     // Enviar email usando EmailJS

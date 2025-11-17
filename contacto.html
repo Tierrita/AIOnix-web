@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
   <meta name="description" content="Contacta con AIOnix - Soluciones en programación e IA. Envíanos tu mensaje y te responderemos en breve." />
   
+  <!-- 📋 Schema.org markup para formulario de contacto -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "AIOnix",
+      "email": "aionix498@gmail.com",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "aionix498@gmail.com",
+        "availableLanguage": ["Spanish", "English"]
+      }
+    }
+  }
+  </script>
+  
   <!-- 🎨 Tema móvil -->
   <meta name="theme-color" content="#00ffff" />
   
@@ -12,13 +31,13 @@
   <link rel="canonical" href="https://aionix.tech/contacto.html" />
   
   <!-- 🔍 Open Graph -->
-  <meta property="og:title" content="Contacto - AIOnix ⚡" />
-  <meta property="og:description" content="¿Tienes un proyecto? Contacta con nosotros hoy." />
+  <meta property="og:title" content="Contacto - AIONIX" />
+  <meta property="og:description" content="¿Tienes un proyecto? Contáctanos." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://aionix.tech/contacto.html" />
   
-  <title>Contacto - AIOnix ⚡</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <title>Contacto - AIONIX</title>
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon" />
   
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
@@ -38,81 +57,126 @@
       <span class="hamburger-line"></span>
     </button>
     <h1 class="header-title"><a href="index.html" class="logo-link">AIONIX</a></h1>
-    <p class="header-subtitle">Inteligencia aplicada al rendimiento ⚡</p>
+    <p class="header-subtitle">Inteligencia aplicada al alto rendimiento</p>
   </header>
   
   <!-- 🧭 NAVEGACIÓN VERTICAL (COLAPSABLE) -->
   <nav class="sidebar sidebar-collapsed" id="main-nav" aria-label="Navegación principal">
     <ul role="list">
-      <li><a href="index.html" aria-label="Ir a la página de inicio"><span class="icon">🏠</span><span class="label">Home</span></a></li>
-      <li><a href="about.html" aria-label="Conocer más sobre AIOnix"><span class="icon">💡</span><span class="label">About</span></a></li>
-      <li><a href="servicios.html" aria-label="Ver nuestros servicios"><span class="icon">⚙️</span><span class="label">Servicios</span></a></li>
-      <li><a href="proyectos.html" aria-label="Explorar proyectos realizados"><span class="icon">🧩</span><span class="label">Proyectos</span></a></li>
-      <li><a href="vision.html" aria-label="Descubrir nuestra visión"><span class="icon">🚀</span><span class="label">Visión</span></a></li>
-      <li><a href="equipo.html" aria-label="Conocer al equipo"><span class="icon">👥</span><span class="label">Equipo</span></a></li>
-      <li><a href="contacto.html" class="active" aria-label="Contactar con nosotros" aria-current="page"><span class="icon">📞</span><span class="label">Contacto</span></a></li>
+      <li><a href="index.html" aria-label="Ir a la página de inicio"><span class="icon">⬢</span><span class="label">Inicio</span></a></li>
+      <li><a href="about.html" aria-label="Conocer más sobre AIOnix"><span class="icon">◉</span><span class="label">Nosotros</span></a></li>
+      <li><a href="servicios.html" aria-label="Ver nuestros servicios"><span class="icon">⧉</span><span class="label">Servicios</span></a></li>
+      <li><a href="proyectos.html" aria-label="Explorar proyectos realizados"><span class="icon">✦</span><span class="label">Proyectos</span></a></li>
+      <li><a href="vision.html" aria-label="Descubrir nuestra visión"><span class="icon">∞</span><span class="label">Visión</span></a></li>
+      <li><a href="equipo.html" aria-label="Conocer al equipo"><span class="icon">⌁</span><span class="label">Equipo</span></a></li>
+      <li><a href="contacto.html" class="active" aria-label="Contactar con nosotros" aria-current="page"><span class="icon">⚡</span><span class="label">Contacto</span></a></li>
     </ul>
   </nav>
 
   <!-- 💫 CONTENIDO PRINCIPAL -->
   <section id="contact" class="contact-container">
     <main>
-      <h1>Ponte en contacto con nosotros</h1>
-      <p class="intro">Nos encantaría escuchar sobre tu proyecto. Llena el formulario y te responderemos lo antes posible.</p>
+      <h1>Contacto</h1>
+      <p class="intro">Discutamos tu proyecto. Completa el formulario y te responderemos en 24 horas.</p>
       
       <div class="contact-content">
         <!-- FORMULARIO -->
         <div class="contact-form-wrapper">
-          <form id="contact-form">
+          <form 
+            id="contact-form" 
+            name="contacto-aionix"
+            action="https://aionix.tech/contacto.html"
+            method="POST"
+            accept-charset="UTF-8"
+            itemscope 
+            itemtype="https://schema.org/ContactPage"
+          >
             <div class="form-group">
               <label for="name">Nombre</label>
-              <input type="text" id="name" name="name" placeholder="Tu nombre completo" required />
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="Tu nombre completo" 
+                required 
+                autocomplete="name"
+                itemprop="name"
+              />
             </div>
 
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="tu@email.com" 
+                required 
+                autocomplete="email"
+                itemprop="email"
+              />
             </div>
 
             <div class="form-group">
               <label for="phone">Teléfono (opcional)</label>
-              <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000" />
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                placeholder="+34 600 000 000" 
+                autocomplete="tel"
+                itemprop="telephone"
+              />
             </div>
 
             <div class="form-group">
               <label for="subject">Asunto</label>
-              <input type="text" id="subject" name="subject" placeholder="¿Sobre qué es tu proyecto?" required />
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                placeholder="¿Sobre qué es tu proyecto?" 
+                required 
+                itemprop="about"
+              />
             </div>
 
             <div class="form-group">
               <label for="message">Mensaje</label>
-              <textarea id="message" name="message" rows="6" placeholder="Cuéntanos tu idea, proyecto o consulta..." required></textarea>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="6" 
+                placeholder="Cuéntanos tu idea, proyecto o consulta..." 
+                required
+                itemprop="text"
+              ></textarea>
             </div>
 
-            <button type="submit" class="btn-primary">📤 Enviar Mensaje</button>
+            <button type="submit" class="btn-primary">⚡ Enviar Mensaje</button>
           </form>
 
           <div id="form-success" class="form-success" style="display: none;">
-            <p>✅ ¡Mensaje enviado! Nos pondremos en contacto pronto.</p>
+            <p>✧ Mensaje enviado. Te responderemos pronto.</p>
           </div>
         </div>
 
         <!-- INFORMACIÓN DE CONTACTO -->
         <div class="contact-info">
-          <h2>Otras formas de contactarnos</h2>
+          <h2>Otras Vías</h2>
 
           <div class="contact-method">
-            <h3>📧 Email</h3>
+            <h3>⧉ Email</h3>
             <p><a href="mailto:aionix498@gmail.com">aionix498@gmail.com</a></p>
           </div>
 
           <div class="contact-method">
-            <h3>🌍 Ubicación</h3>
+            <h3>◉ Ubicación</h3>
             <p>Buenos Aires, Argentina</p>
           </div>
 
           <div class="contact-method">
-            <h3>🔗 Redes Sociales</h3>
+            <h3>✦ Redes</h3>
             <div class="social-links">
               <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank" rel="noopener" class="social-icon">LinkedIn Franco</a>
               <a href="https://www.linkedin.com/in/gabriel-silva-75341a219/" target="_blank" rel="noopener" class="social-icon">LinkedIn Gabriel</a>
@@ -121,8 +185,8 @@
           </div>
 
           <div class="contact-method info-box">
-            <h3>💡 ¿Tienes prisa?</h3>
-            <p>Escríbenos un email directamente para respuestas más rápidas. Normalmente respondemos en menos de 24 horas.</p>
+            <h3>⚡ Respuesta rápida</h3>
+            <p>Envíanos un email directo. Respondemos en menos de 24 horas.</p>
           </div>
         </div>
       </div>
@@ -132,10 +196,10 @@
   <!-- 🧾 PIE DE PÁGINA -->
   <footer class="aionix-footer">
     <div class="footer-left">
-      <p>© 2025 AIONIX | Inteligencia aplicada al rendimiento.</p>
+      <p>© 2025 AIONIX ⧉ Inteligencia aplicada al alto rendimiento</p>
     </div>
     <div class="footer-center">
-      <p>🌍 Buenos Aires, Argentina · aionix498@gmail.com</p>
+      <p>◉ Buenos Aires, Argentina ✦ aionix498@gmail.com</p>
     </div>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/franco-cuenca-5ab69a348" target="_blank" rel="noopener">LinkedIn</a>

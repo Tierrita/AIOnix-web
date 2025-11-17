@@ -1,492 +1,333 @@
-# AIOnix - Soluciones en Programación e IA
+# ⚡ AIOnix Web - Sitio Oficial
 
-Página web oficial de AIOnix, una empresa de soluciones tecnológicas fundada por Franco y Gabriel.
+<div align="center">
 
-## 🚀 Estado del Proyecto
+![AIOnix](https://img.shields.io/badge/AIOnix-Inteligencia%20Aplicada-00ffff?style=for-the-badge)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-| Sección        | Estado                       | % Completo |
-| -------------- | ---------------------------- | ---------- |
-| Home           | ✅ Completo                  | 100%       |
-| Servicios      | ✅ Completo                  | 100%       |
-| Sobre Nosotros | ✅ Completo                  | 100%       |
-| Equipo         | ✅ Completo                  | 100%       |
-| Visión         | ✅ Completo                  | 100%       |
-| Proyectos      | ✅ Placeholder               | 100%       |
-| Contacto       | ✅ Funcional                 | 100%       |
-| SEO            | ✅ Optimizado                | 95%        |
-| Performance    | ✅ Optimizado                | 90%        |
-| **TOTAL**      | **✅ LISTO PARA PRODUCCIÓN** | **96%**    |
+**Sitio web oficial de AIOnix - Soluciones inteligentes en programación e IA**
 
-## 🎯 Características Principales
+[🌐 Ver Demo](https://aionix.tech) • [📧 Contacto](mailto:aionix498@gmail.com) • [📚 Docs](./docs/)
 
-- ✨ Diseño futurista con animaciones VANTA.NET
-- 📱 Completamente responsive (mobile-first, probado en <768px)
-- 🎯 SEO optimizado con meta-tags, Open Graph, Twitter Card y sitemap.xml
-- 💬 Formulario de contacto integrado con Formspree (gratis)
-- 🎨 Paleta de colores cyberpunk (cyan/teal #00ffff)
-- ⚡ Performance optimizado (lazy-loading, prefers-reduced-motion respetado)
-- 📊 Google Analytics integrado (listo para configurar)
-- 🔐 Headers de seguridad y caché configurados en .htaccess
-- 🤖 Tracking de eventos (CTA clicks, form submit)
-- 📝 Sitemap, robots.txt y meta canónicas
+</div>
+
+---
+
+## 📋 Tabla de Contenidos
+
+- [🎯 Sobre el Proyecto](#-sobre-el-proyecto)
+- [✨ Características](#-características)
+- [📁 Estructura del Proyecto](#-estructura-del-proyecto)
+- [🚀 Instalación](#-instalación)
+- [🛠️ Tecnologías](#️-tecnologías)
+- [📱 Responsive Design](#-responsive-design)
+- [🎨 Diseño](#-diseño)
+- [📞 Contacto](#-contacto)
+- [📄 Licencia](#-licencia)
+
+---
+
+## 🎯 Sobre el Proyecto
+
+AIOnix es una agencia de desarrollo web especializada en crear soluciones inteligentes con IA. Este es nuestro sitio web oficial, diseñado con un estilo futurista y cyberpunk que refleja nuestra filosofía de innovación tecnológica.
+
+### 🌟 Highlights
+
+- ⚡ Diseño futurista con animaciones fluidas
+- 🎨 Efectos visuales con Vanta.js
+- 📱 Completamente responsive (mobile-first)
+- 🚀 Optimizado para SEO
+- ✉️ Formulario de contacto con EmailJS
+- 🌐 Multi-página con navegación suave
+
+---
+
+## ✨ Características
+
+### 🎨 Diseño Visual
+
+- **Sidebar colapsable** con efectos hover y glow
+- **Menú hamburguesa** animado para mobile
+- **Canvas animado** con efectos de energía
+- **Glassmorphism** en tarjetas y contenedores
+- **Gradientes cian/azul** con tema cyberpunk
+
+### 🔧 Funcionalidades
+
+- ✅ Navegación fluida entre páginas
+- ✅ Formulario de contacto funcional (EmailJS)
+- ✅ Tech stack interactivo con badges animados
+- ✅ Sección de equipo con fotos
+- ✅ Proyectos destacados
+- ✅ Roadmap y visión de la empresa
+
+### 📱 Mobile Optimized
+
+- ✅ Sidebar fuera de pantalla en mobile
+- ✅ Hero responsive con grid adaptable
+- ✅ Sin overflow horizontal
+- ✅ Touch-friendly con gestos optimizados
+
+---
 
 ## 📁 Estructura del Proyecto
 
 ```
-/
-├── index.html              # Página principal con hero
-├── servicios.html          # 6 servicios principales
-├── contacto.html           # Formulario funcional (Formspree)
-├── equipo.html             # Perfiles Franco y Gabriel + fotos
-├── about.html              # Misión, visión, valores
-├── proyectos.html          # Portfolio (placeholder)
-├── vision.html             # Roadmap 2025-2026 e impacto
+AIOnix-web/
 │
-├── css/
-│   ├── style.css           # Estilos base + animaciones
-│   ├── servicios.css       # Página servicios
-│   ├── contacto.css        # Página contacto
-│   ├── equipo.css          # Página equipo
-│   ├── about.css           # Página about
-│   ├── proyectos.css       # Página proyectos
-│   └── vision.css          # Página visión
+├── 📄 index.html              # Página principal
+├── 📄 about.html              # Sobre nosotros
+├── 📄 servicios.html          # Nuestros servicios
+├── 📄 proyectos.html          # Portfolio de proyectos
+├── 📄 vision.html             # Visión y roadmap
+├── 📄 equipo.html             # Equipo fundador
+├── 📄 contacto.html           # Formulario de contacto
 │
-├── js/
-│   ├── main.js             # Animaciones VANTA.NET, analytics
-│   └── contacto.js         # Validación formulario
+├── 📄 robots.txt              # SEO - Crawlers
+├── 📄 sitemap.xml             # SEO - Mapa del sitio
+├── 📄 .htaccess               # Configuración Apache
+├── 📄 .gitignore              # Git ignore rules
 │
-├── Assent/
-│   ├── img/
-│   │   ├── Cuenca_perfil.jpg     # Foto Franco
-│   │   └── Silva_perfil.jpg      # Foto Gabriel
-│   └── icons/              # Iconografía (si aplica)
+├── 📂 assets/                 # Recursos estáticos
+│   ├── 📂 icons/              # Iconos y favicons
+│   │   ├── favicon.ico
+│   │   ├── apple-touch-icon.png
+│   │   └── og-image.png
+│   │
+│   └── 📂 img/                # Imágenes del sitio
+│       ├── Cuenca_perfil.jpeg
+│       └── Silva_perfil.jpg
 │
-├── robots.txt              # Instrucciones para buscadores
-├── sitemap.xml             # Mapa del sitio para SEO
-├── .htaccess               # Configuración Apache (caché, gzip, seguridad)
-├── README.md               # Este archivo
-└── .git/                   # Control de versiones
+├── 📂 css/                    # Estilos
+│   ├── style.css              # Estilos globales
+│   ├── about.css
+│   ├── contacto.css
+│   ├── equipo.css
+│   ├── proyectos.css
+│   ├── servicios.css
+│   └── vision.css
+│
+├── 📂 js/                     # JavaScript
+│   ├── main.js                # Script principal (Vanta, sidebar)
+│   └── contacto.js            # EmailJS para formulario
+│
+├── 📂 docs/                   # Documentación interna
+│   ├── README.md
+│   ├── CAMBIOS_RESPONSIVE_COMPLETOS.md
+│   ├── INFORME_LIMPIEZA_PROYECTO.md
+│   └── ...
+│
+└── 📂 test/                   # Archivos de prueba
+    ├── test-email.html
+    └── test-gmail.html
 ```
 
-## 🛠️ Instalación y Ejecución Local
+---
 
-### Opción 1: Abrir directamente en navegador
+## 🚀 Instalación
+
+### 1️⃣ Clonar el repositorio
 
 ```bash
-# En Windows, desde PowerShell:
-ii .\index.html
-
-# O con explorador: click derecho → Abrir con navegador
+git clone https://github.com/Tierrita/AIOnix-web.git
+cd AIOnix-web
 ```
 
-### Opción 2: Servidor local (recomendado)
+### 2️⃣ Abrir en navegador
+
+**Opción A: Servidor local simple**
 
 ```bash
 # Python 3
 python -m http.server 8000
 
-# Node.js
+# Node.js (si tienes http-server)
 npx http-server
 
-# Luego abre: http://localhost:8000
+# PHP
+php -S localhost:8000
 ```
 
-## 🌐 Despliegue en Producción
+**Opción B: Live Server (VS Code)**
 
-### **Opción A: GitHub Pages (Gratis, automático)**
+1. Instala la extensión "Live Server"
+2. Click derecho en `index.html` → "Open with Live Server"
 
-```bash
-# 1. Sube los cambios
-git add .
-git commit -m "🚀 Web AIOnix lista para producción"
-git push origin equipo
+### 3️⃣ Configurar EmailJS (opcional)
 
-# 2. Ve a: GitHub > Settings > Pages
-# 3. Selecciona rama "equipo" como fuente
-# 4. Tu sitio estará en: https://tierrita.github.io/AIOnix-web
-```
+Si quieres usar el formulario de contacto:
 
-**Ventajas:** Gratis, automático, con HTTPS
-**Desventajas:** No soporta .htaccess
-
-### **Opción B: Netlify (Gratis + CI/CD)**
-
-```bash
-# 1. Instala Netlify CLI
-npm install -g netlify-cli
-
-# 2. Deploy
-netlify deploy --prod
-
-# 3. Sigue las instrucciones interactivas
-# Tu sitio: https://tu-dominio.netlify.app
-```
-
-**Ventajas:** Formularios, CI/CD, caché, muy rápido
-**Desventajas:** Limitado en funciones avanzadas
-
-### **Opción C: Vercel (Gratis, muy rápido)**
-
-```bash
-# 1. Instala Vercel CLI
-npm install -g vercel
-
-# 2. Deploy
-vercel
-
-# 3. Sigue las instrucciones
-# Tu sitio: https://tu-dominio.vercel.app
-```
-
-**Ventajas:** Muy rápido, optimización automática
-**Desventajas:** Mejor para apps Node/framework
-
-### **Opción D: VPS / Hosting Compartido (Pago)**
-
-1. Sube archivos vía FTP a `public_html/`
-2. Configurar dominio en panel de control
-3. `.htaccess` se ejecutará automáticamente
-4. ✅ Listo
-
-## 📋 Checklist Antes de Desplegar
-
-- [x] Todas las páginas creadas y funcionales
-- [x] Responsive probado en móvil
-- [x] Meta tags SEO completos
-- [x] Formulario contacto integrado
-- [x] Fotos de equipo (Franco y Gabriel)
-- [x] Animaciones optimizadas
-- [ ] **TODO:** Cambiar links de redes (LinkedIn, GitHub, Instagram)
-- [ ] **TODO:** Configurar Formspree con tu email real
-- [ ] **TODO:** Crear favicon y apple-touch-icon
-- [ ] **TODO:** Crear logo AIOnix (si quieres reemplazar el texto)
-- [ ] **TODO:** Configurar Google Analytics
-- [ ] **TODO:** Registrar dominio personalizado
-- [ ] **TODO:** Configurar SSL/HTTPS
-
-## 🔧 Configuración Rápida
-
-### Cambiar Links de Redes
-
-Busca en todos los HTML y reemplaza:
-
-```
-Buscar: https://linkedin.com
-Reemplazar: https://linkedin.com/in/TU_USUARIO
-
-Buscar: https://github.com
-Reemplazar: https://github.com/TU_USUARIO
-
-Buscar: https://instagram.com
-Reemplazar: https://instagram.com/TU_USUARIO
-```
-
-### Configurar Formspree
-
-1. Ve a https://formspree.io
-2. Crea una cuenta (gratis)
-3. Crea un nuevo formulario
-4. Copia tu endpoint (formato: `https://formspree.io/f/xxxxx`)
-5. Reemplaza en `contacto.html` línea 52:
-
-```html
-<form id="contact-form" method="POST" action="TU_ENDPOINT_FORMSPREE"></form>
-```
-
-### Añadir Google Analytics
-
-1. Crea una cuenta en https://analytics.google.com
-2. Copia tu ID de GA4 (formato: `G-XXXXXXXXXX`)
-3. Descomenta en `js/main.js` líneas ~110-114:
+1. Crear cuenta en [EmailJS](https://www.emailjs.com/)
+2. Configurar un servicio de email
+3. Crear una plantilla
+4. Actualizar credenciales en `js/contacto.js`:
 
 ```javascript
-window.dataLayer = window.dataLayer || [];
-function gtag() {
-  dataLayer.push(arguments);
-}
-gtag("js", new Date());
-gtag("config", "G-TU_ID_AQUI");
+emailjs.init("TU_PUBLIC_KEY");
+emailjs.send("TU_SERVICE_ID", "TU_TEMPLATE_ID", templateParams);
 ```
-
-## 🎨 Personalización
-
-### Cambiar Colores
-
-Edita `css/style.css` variables:
-
-```css
-:root {
-  --color-accent: #00ffff; /* Cambiar este color */
-  --color-accent-dim: rgba(0, 255, 255, 0.5);
-  --color-border: rgba(0, 255, 255, 0.2);
-}
-```
-
-### Cambiar Textos
-
-- Header: Edita `<h1 class="header-title">AIONIX</h1>` en todos los HTML
-- Servicios: Edita contenido en `servicios.html`
-- Equipo: Actualiza nombres y roles en `equipo.html`
-- Visión: Modifica roadmap en `vision.html`
-
-## 📱 Testing y QA
-
-### Responsive Design
-
-```bash
-# Abre DevTools en navegador:
-# - F12 o Ctrl+Shift+I
-# - Click en "Toggle device toolbar"
-# - Prueba en: iPhone 12, iPad, Desktop
-```
-
-### Performance
-
-```bash
-# Google Lighthouse (en DevTools)
-# - Click en "Lighthouse"
-# - Genera reporte
-# - Objetivo: Score >85
-```
-
-### SEO
-
-```bash
-# Verifica en:
-# - https://search.google.com/search-console (registra URL)
-# - https://www.seobility.net (auditoría gratuita)
-```
-
-## 🚀 Optimize Tips
-
-1. **Comprimir imágenes:** https://tinypng.com (fotos Franco/Gabriel)
-2. **Generar favicon:** https://favicon-generator.org
-3. **Minificar CSS/JS:** https://minifier.org (opcional, no crítico)
-4. **Validar HTML:** https://validator.w3.org
-5. **Audit de accesibilidad:** Lighthouse en DevTools
-
-## 📊 Monitoreo Post-Despliegue
-
-Cada semana, chequea:
-
-- [ ] Google Analytics: tráfico, fuentes, comportamiento
-- [ ] Google Search Console: índexación, errores
-- [ ] Uptime monitor: https://uptime.com (gratis)
-- [ ] Formularios de contacto: emails recibidos
-- [ ] Errores de consola: inspecciona DevTools
-
-## 🆘 Troubleshooting
-
-### "No me aparece animación de fondo"
-
-- Respeta `prefers-reduced-motion`
-- Usa navegador moderno (Chrome, Firefox, Safari)
-- Verifica que VANTA.NET carga desde CDN
-
-### "El formulario no envía"
-
-- Verifica endpoint de Formspree
-- Confirma que Formspree email está verificado
-- Abre consola (DevTools) y busca errores
-
-### "Página lenta"
-
-- Comprimi imágenes (fotos)
-- Desactiva animaciones en móvil (opcional)
-- Usa Google Lighthouse para diagnosticar
-
-## 📞 Contacto y Soporte
-
-- **Email:** contacto@aionix.tech
-- **Ubicación:** Buenos Aires, Argentina
-- **Web:** https://aionix.tech (cuando esté deployada)
-
-## 📄 Licencia
-
-© 2025 AIOnix - Todos los derechos reservados
 
 ---
 
-**Última actualización:** 10 de noviembre de 2025  
-**Rama:** equipo  
-**Status:** ✅ **LISTO PARA PRODUCCIÓN**  
-**Próximos pasos:** Cambiar links, configurar Formspree, desplegar en GitHub Pages/Netlify
+## 🛠️ Tecnologías
 
-- Simplemente abre `index.html` en tu navegador
-- O usa un servidor local:
+### Frontend
 
-  ```bash
-  # Con Python 3
-  python -m http.server 8000
+- **HTML5** - Estructura semántica
+- **CSS3** - Estilos modernos (Grid, Flexbox, Variables CSS)
+- **JavaScript** (Vanilla) - Interactividad
 
-  # Con Node.js
-  npx http-server
-  ```
+### Librerías
 
-3. **Ver en navegador:**
-   - Abre `http://localhost:8000`
+- **[Vanta.js](https://www.vantajs.com/)** - Efectos de fondo animados
+- **[EmailJS](https://www.emailjs.com/)** - Envío de formularios sin backend
+- **[Google Fonts](https://fonts.google.com/)** - Orbitron + Rajdhani
 
-## 📝 Formulario de Contacto
+### Herramientas
 
-El formulario usa **Formspree** (servicio gratis).
+- **Git** - Control de versiones
+- **VS Code** - Editor de código
 
-**Configuración actual:**
+---
 
-- Endpoint: `https://formspree.io/f/xvgzrgzw`
-- Emails enviados a: `contacto@aionix.tech`
+## 📱 Responsive Design
 
-**Para cambiar el email destino:**
+El sitio está optimizado para todos los dispositivos:
 
-1. Ve a https://formspree.io
-2. Crea una cuenta o inicia sesión
-3. Crea un formulario nuevo
-4. Copia el endpoint
-5. Reemplaza en `contacto.html` línea 52:
-   ```html
-   <form id="contact-form" method="POST" action="TU_NUEVO_ENDPOINT"></form>
-   ```
+| Breakpoint          | Rango           | Layout       |
+| ------------------- | --------------- | ------------ |
+| 📱 Mobile Small     | 320px - 375px   | 1 columna    |
+| 📱 Mobile Medium    | 376px - 480px   | 1 columna    |
+| 📱 Mobile Large     | 481px - 767px   | 1 columna    |
+| 📱 Tablet Portrait  | 768px - 1023px  | 1-2 columnas |
+| 💻 Tablet Landscape | 1024px - 1365px | 2 columnas   |
+| 💻 Laptop/Desktop   | 1366px - 1919px | 2-3 columnas |
+| 🖥️ Desktop XL       | 1920px+         | 3+ columnas  |
 
-## 🌐 Despliegue
+### 🎯 Características Responsive
 
-### Opción 1: GitHub Pages (Gratis)
+✅ **Mobile-first approach**  
+✅ **Sin overflow horizontal**  
+✅ **Touch-friendly (44px mínimo)**  
+✅ **Sidebar colapsable**  
+✅ **Imágenes optimizadas con lazy loading**  
+✅ **Tipografía fluida con `clamp()`**
 
-```bash
-# 1. Sube los cambios a GitHub
-git add .
-git commit -m "Mejoras en la web"
-git push origin equipo
+---
 
-# 2. Ve a Settings > Pages
-# 3. Selecciona rama "equipo" como fuente
-# 4. Tu sitio estará en https://tierrita.github.io/AIOnix-web
-```
+## 🎨 Diseño
 
-### Opción 2: Netlify (Gratis + CI/CD)
-
-```bash
-# 1. Instala Netlify CLI
-npm install -g netlify-cli
-
-# 2. Deploy
-netlify deploy --prod
-
-# 3. Sigue las instrucciones en pantalla
-```
-
-### Opción 3: Vercel (Gratis)
-
-```bash
-# 1. Instala Vercel CLI
-npm install -g vercel
-
-# 2. Deploy
-vercel
-
-# 3. Sigue las instrucciones
-```
-
-## 📱 Links de Redes Sociales
-
-Actualiza estos links en los footers y página de equipo:
-
-- **LinkedIn:** `https://linkedin.com/in/TU_USUARIO`
-- **GitHub:** `https://github.com/TU_USUARIO`
-- **Instagram:** `https://instagram.com/TU_USUARIO`
-- **Email:** `contacto@aionix.tech`
-
-Busca `https://linkedin.com` en los archivos HTML y reemplaza.
-
-## 🎨 Personalización
-
-### Colores
-
-Edita las variables en `css/style.css`:
+### Paleta de Colores
 
 ```css
-:root {
-  --color-bg: #000000;
-  --color-text: #e0e0e0;
-  --color-accent: #00ffff; /* Cambiar este color */
-  --color-accent-dim: rgba(0, 255, 255, 0.5);
-  --color-border: rgba(0, 255, 255, 0.2);
-}
+--color-bg: #000000; /* Fondo negro profundo */
+--color-text: #e0e0e0; /* Texto gris claro */
+--color-accent: #00ffff; /* Cian brillante */
+--color-accent-dim: rgba(0, 255, 255, 0.5);
+--color-border: rgba(0, 255, 255, 0.2);
 ```
 
-### Textos
+### Tipografía
 
-- **Header:** Edita `<h1 class="header-title">` en todos los HTML
-- **Servicios:** Edita contenido en `servicios.html`
-- **Equipo:** Actualiza nombres y roles en `equipo.html`
+- **Títulos:** Orbitron (Futurista, cyberpunk)
+- **Cuerpo:** Rajdhani (Legible, moderna)
 
-### Animaciones
+### Efectos Visuales
 
-- **Velocidad Vanta.NET:** Edita `spacing`, `points`, `maxDistance` en `js/main.js`
-- **Color respirante:** Cambia `setInterval` en `js/main.js`
+- 🌌 **Fondo animado** con red de partículas (Vanta.js)
+- ✨ **Glow effects** en hover y focus
+- 💨 **Canvas de energía** con gradientes animados
+- 🔷 **Glassmorphism** en tarjetas
+- 🎭 **Transiciones suaves** (cubic-bezier)
 
-## 📊 Google Analytics (Opcional)
+---
 
-Para añadir tracking:
+## 🔧 Mantenimiento
 
-1. Ve a https://analytics.google.com
-2. Crea una propiedad web
-3. Copia tu ID de GA4 (formato: `G-XXXXXXXXXX`)
-4. Descomenta en `js/main.js`:
-   ```javascript
-   window.dataLayer = window.dataLayer || [];
-   function gtag() {
-     dataLayer.push(arguments);
-   }
-   gtag("js", new Date());
-   gtag("config", "G-TU_ID_AQUI");
-   ```
+### Agregar una nueva página
 
-## 🔍 SEO Optimizaciones
+1. Crear archivo HTML en la raíz
+2. Copiar estructura de `index.html`
+3. Actualizar navegación en sidebar
+4. Crear CSS específico en `/css`
+5. Actualizar `sitemap.xml`
 
-- ✅ Meta descriptions
-- ✅ Meta keywords
-- ✅ Open Graph (redes sociales)
-- ✅ Twitter Cards
-- ✅ Canonical URLs (agregar si se republica)
-- ⚠️ Falta: Sitemap.xml y robots.txt
+### Optimizar imágenes
 
-## ⚡ Performance
+```bash
+# Convertir a WebP (mejor compresión)
+cwebp -q 80 assets/img/original.jpg -o assets/img/original.webp
 
-- **Lighthouse Score:** ~85 (objetivo)
-- **Core Web Vitals:** Optimizadas
-- **Lazy Loading:** Activado en imágenes
-- **prefers-reduced-motion:** Respetado
-- **Three.js:** Removido (innecesario)
+# Redimensionar imágenes
+convert assets/img/original.jpg -resize 1200x assets/img/original-optimized.jpg
+```
 
-## 🐛 Issues Conocidos
+### Minificar CSS/JS (producción)
 
-- [ ] Pages `about.html`, `proyectos.html`, `vision.html` aún sin contenido
-- [ ] Favicon no creado (usar generador online)
-- [ ] Google Analytics no habilitado por defecto
-- [ ] Links de redes (LinkedIn, GitHub) apuntan a URLs genéricas
+```bash
+# CSS
+npx clean-css-cli -o css/style.min.css css/style.css
 
-## 📋 Checklist de Producción
+# JavaScript
+npx terser js/main.js -o js/main.min.js
+```
 
-- [ ] Favicon creado y añadido
-- [ ] Google Analytics configurado
-- [ ] Formspree email verificado
-- [ ] Links de redes actualizados
-- [ ] Testing en móvil (iPhone, Android)
-- [ ] Testing en navegadores (Chrome, Firefox, Safari)
-- [ ] Dominio personalizado configurado
-- [ ] SSL/HTTPS habilitado
-- [ ] Cache y compresión configurados
+---
+
+## 📊 Performance
+
+### Lighthouse Score (Target)
+
+- 🟢 **Performance:** 90+
+- 🟢 **Accessibility:** 95+
+- 🟢 **Best Practices:** 95+
+- 🟢 **SEO:** 100
+
+### Optimizaciones Implementadas
+
+✅ Lazy loading en imágenes  
+✅ Async/defer en scripts  
+✅ Minificación de recursos  
+✅ Caché con `.htaccess`  
+✅ Preconnect a Google Fonts  
+✅ Meta tags optimizados para SEO
+
+---
 
 ## 📞 Contacto
 
-- **Email:** contacto@aionix.tech
-- **Ubicación:** Buenos Aires, Argentina
+**AIOnix - Inteligencia aplicada al rendimiento**
 
-## 📄 Licencia
-
-Todos los derechos reservados © 2025 AIOnix
+- 🌐 **Web:** [aionix.tech](https://aionix.tech)
+- 📧 **Email:** aionix498@gmail.com
+- 📍 **Ubicación:** Buenos Aires, Argentina
+- 💼 **LinkedIn:**
+  - [Franco Cuenca](https://www.linkedin.com/in/franco-cuenca-5ab69a348)
+  - [Gabriel Silva](https://www.linkedin.com/in/gabriel-silva-75341a219/)
+- 🐙 **GitHub:** [Tierrita](https://github.com/Tierrita)
 
 ---
 
-**Última actualización:** 10 de noviembre de 2025
-**Rama:** equipo
-**Status:** En desarrollo
+## 📄 Licencia
+
+Este proyecto es propiedad de **AIOnix**. Todos los derechos reservados © 2025.
+
+---
+
+## 🙏 Agradecimientos
+
+- **[Vanta.js](https://www.vantajs.com/)** por los efectos de fondo
+- **[EmailJS](https://www.emailjs.com/)** por el servicio de formularios
+- **[Google Fonts](https://fonts.google.com/)** por las tipografías
+
+---
+
+<div align="center">
+
+**Hecho con ⚡ por el equipo de AIOnix**
+
+[⬆ Volver arriba](#-aionix-web---sitio-oficial)
+
+</div>
